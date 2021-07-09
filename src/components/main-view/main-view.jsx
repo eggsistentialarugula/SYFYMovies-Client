@@ -4,7 +4,7 @@ import { MovieView } from '../movie-view/movie-view';
 
 export class MainView extends React.Component {
     constructor() {
-        super(); // refers to OOP, means call the constructor of the parent class, in this case 'React.Component'
+        super(); //call the constructor of the parent class, 'React.Component'
         this.state = {
             movies: [
                 { _id: 1, title: 'Sharknado', description: 'Sharknado is a 2013 American made-for-television sci-fi disaster film about a waterspout that lifts sharks out of the ocean and deposits them in Los Angeles. It is the first installment in the Sharknado film series.', imagePath: 'https://images-na.ssl-images-amazon.com/images/I/71QROsENugL._AC_SL1254_.jpg' },
