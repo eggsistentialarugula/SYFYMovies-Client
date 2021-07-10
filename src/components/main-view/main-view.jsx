@@ -3,9 +3,9 @@ import { MovieCard } from '../movie-card/movie-card';
 import { MovieView } from '../movie-view/movie-view';
 
 export class MainView extends React.Component {
-    constructor() {
-        super(); //call the constructor of the parent class, 'React.Component'
-        this.state = {
+    constructor() { //code inside constructor is the first thing to be executed for a component
+        super(); //call the constructor of the parent class, 'React.Component'. initializes your component's state
+        this.state = { //movie's state that holds the list of movies
             movies: [
                 { _id: 1, title: 'Sharknado', description: 'Sharknado is a 2013 American made-for-television sci-fi disaster film about a waterspout that lifts sharks out of the ocean and deposits them in Los Angeles. It is the first installment in the Sharknado film series.', imagePath: 'https://images-na.ssl-images-amazon.com/images/I/71QROsENugL._AC_SL1254_.jpg' },
                 { _id: 2, title: 'Mega Shark Versus Mecha Shark', description: 'The film is a sequel to Mega Shark Versus Giant Octopus and Mega Shark Versus Crocosaurus, and is the third installment in the Mega Shark film series. A tugboat pulling a huge iceberg arrives at a port in Alexandria, Egypt, when suddenly, the iceberg shatters and releases a megalodon from suspended animation. The Mega Shark begins its reign of terror by flipping the tugboat to the air until it crashes and decapitates the Sphinx hundreds of miles away in Giza.', imagePath: 'https://m.media-amazon.com/images/M/MV5BMTQzMDIyMjgxMF5BMl5BanBnXkFtZTgwODYzNjg4MDE@._V1_.jpg' },
@@ -22,7 +22,7 @@ export class MainView extends React.Component {
     }
 
     render() {
-        const { movies, selectedMovie } = this.state;
+        const { movies, selectedMovie } = this.state; //object destruction
 
         if (movies.length === 0) return <div class="main-view">'The list is empty'</div>;
 
