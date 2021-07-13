@@ -41,7 +41,7 @@ export class MainView extends React.Component {
     render() {
         const { movies, selectedMovie } = this.state; //object destruction
 
-        if (movies.length === 0) return <div class="main-view" />;
+        if (movies.length === 0) return <div className="main-view" />;
 
         return (
             <div className="main-view">
