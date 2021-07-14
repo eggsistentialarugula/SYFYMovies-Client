@@ -15,6 +15,10 @@ export class MainView extends React.Component {
         };
     }
 
+    // this function is a good place to add code for performing async tasks like making ajax requests or adding event listeners.
+
+    //This function will fetch the list of movies from my database when MainView is mounted.
+
     componentDidMount() {
         axios.get('https://mysyfymovies.herokuapp.com/movies')
             .then(reponse => {
