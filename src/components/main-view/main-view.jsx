@@ -6,8 +6,8 @@ import { MovieView } from '../movie-view/movie-view';
 
 
 export class MainView extends React.Component {
-
     constructor() {
+        // code executed right when the component is created in the memory
         super();
         this.state = {
             movies: [],
@@ -20,6 +20,7 @@ export class MainView extends React.Component {
     //This function will fetch the list of movies from my database when MainView is mounted.
 
     componentDidMount() {
+        // code executed right after the component is added to the DOM.
         axios.get('https://mysyfymovies.herokuapp.com/movies')
             .then(reponse => {
                 this.setState({
