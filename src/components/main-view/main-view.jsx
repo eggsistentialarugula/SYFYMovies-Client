@@ -10,9 +10,11 @@ export class MainView extends React.Component {
     constructor() {
         // code executed right when the component is created in the memory
         super();
+        //initial state set to null, default is logged out
         this.state = {
             movies: [],
-            selectedMovie: null
+            selectedMovie: null,
+            user: null
         };
     }
 
@@ -33,19 +35,32 @@ export class MainView extends React.Component {
             });
     }
 
+    /* When a movie is clicked, this function is invoked and updates the state of the 'selectedMovie' property to that movie */
     setSelectedMovie(newSelectedMovie) {
         this.setState({
             selectedMovie: newSelectedMovie
         });
     }
 
+    // this menthod will update the user state of the MainView component and will be called when the user has successfully logged in
+
+    onLoggedIn(user) {
+        this.setState({
+            user
+        });
+    }
+
     render() {
-        const { movies, selectedMovie } = this.state;
+        const { movies, selectedMovie, user } = this.state;
+
+        // If there is no user, the LoginView is CanvasRenderingContext2D. If there is a user logged in, the user details are passed as a prop to the LoginView
+        if (!user) return <LoginView onLoggedIn={user => this.onLoggedIn(user)} />;
 
         if (movies.length === 0) return <div className="main-view" />;
 
         return (
             <div className="main-view">
+                {/* If the state of the 'selectedMovie' is not null, that selected will be returned. Otherwise, all movies will be returned */}
                 {selectedMovie
                     ? <MovieView movie={selectedMovie} onBackClick={newSelectedMovie => { this.setSelectedMovie(newSelectedMovie); }} />
                     : movies.map(movie => (
