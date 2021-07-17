@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 
 export function LoginView(props) {
     //useState('') is the initial value of my login variable
@@ -24,6 +25,12 @@ export function LoginView(props) {
                 <input type="password" value={password} onChange={e => setPassword(e.target.value)} />
             </label>
             <button type="submit" onClick={handleSubmit}>Submit</button>
+            {/* registration button */}
         </form>
     );
 }
+
+LoginView.propTypes = {
+    regUser: PropTypes.func,
+    onLoggedIn: PropTypes.func.isRequired
+};
