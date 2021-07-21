@@ -3,7 +3,7 @@ import axios from 'axios'
 
 import { MovieCard } from '../movie-card/movie-card';
 import { MovieView } from '../movie-view/movie-view';
-
+import { Container, Row } from 'react-bootstrap';
 
 export class MainView extends React.Component {
     constructor() {
@@ -39,11 +39,21 @@ export class MainView extends React.Component {
     }
 
     render() {
+<<<<<<< Updated upstream
         const { movies, selectedMovie } = this.state;
+=======
+        const { movies, selectedMovie, user, registered } = this.state;
+
+        // if (!user && !registered) return <RegistrationView onRegistration={regStatus => this.regStatus(regStatus)} />;
+
+        // If there is no user, the LoginView is rendered. If there is a user logged in, the user details are passed as a prop to the LoginView
+        if (!user && registered) return <LoginView onLoggedIn={user => this.onLoggedIn(user)} />;
+>>>>>>> Stashed changes
 
         if (movies.length === 0) return <div className="main-view" />;
 
         return (
+<<<<<<< Updated upstream
             <div className="main-view">
                 {selectedMovie
                     ? <MovieView movie={selectedMovie} onBackClick={newSelectedMovie => { this.setSelectedMovie(newSelectedMovie); }} />
@@ -52,6 +62,20 @@ export class MainView extends React.Component {
                     ))
                 }
             </div>
+=======
+            <Container>
+                <div className="main-view">
+                    {/* If the state of the 'selectedMovie' is not null, that selected will be returned. Otherwise, all movies will be returned */}
+                    {selectedMovie
+                        ? <MovieView movie={selectedMovie} onBackClick={newSelectedMovie => { this.setSelectedMovie(newSelectedMovie); }} />
+                        : movies.map(movie => (
+                            <MovieCard key={movie._id} movie={movie} onMovieClick={(newSelectedMovie) => { this.setSelectedMovie(newSelectedMovie) }} />
+                        ))
+                    }
+                </div>
+            </Container>
+
+>>>>>>> Stashed changes
         );
     }
 }
