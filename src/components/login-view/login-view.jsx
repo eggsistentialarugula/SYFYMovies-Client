@@ -1,9 +1,5 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form'
-
-import './login-view.scss';
 
 export function LoginView(props) {
     //useState('') is the initial value of my login variable
@@ -19,23 +15,18 @@ export function LoginView(props) {
     };
 
     return (
-        <Form className="text-center">
-
-            <h5 className="signIn font-weight-bolder text-center">Sign In</h5>
-            <hr></hr>
-            <Form.Group controlId="formUsername">
-                <Form.Label className="font-weight-bold">Username:</Form.Label>
-                <Form.Control className="inputBox" type="text" placeholder="Username" onChange={e => setUsername(e.target.value)} />
-            </Form.Group>
-
-            <Form.Group controlId="formPassword">
-                <Form.Label className="font-weight-bold">Password:</Form.Label>
-                <Form.Control className="inputBox" type="password" placeholder="Password" onChange={e => setPassword(e.target.value)} />
-            </Form.Group>
-            <Button className="font-weight-bold formButton" type="submit" onClick={handleSubmit}>
-                Log In
-            </Button>
-        </Form>
+        <form>
+            <label>
+                Username:
+                <input type="text" value={username} onChange={e => setUsername(e.target.value)} />
+            </label>
+            <label>
+                Password:
+                <input type="password" value={password} onChange={e => setPassword(e.target.value)} />
+            </label>
+            <button type="submit" onClick={handleSubmit}>Submit</button>
+            {/* registration button */}
+        </form>
     );
 }
 
