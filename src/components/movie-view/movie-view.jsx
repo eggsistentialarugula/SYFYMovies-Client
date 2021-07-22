@@ -11,18 +11,22 @@ export class MovieView extends React.Component {
         const { movie, onBackClick } = this.props;
 
         return (
-            // <Card className="bg-dark text-white">
-            //     <Card.Img src={movie.Image} alt="movie image" />
-            //     <Card.ImgOverlay>
-            //         <Card.Title>{movie.Title}</Card.Title>
-            //         <Card.Text>
-            //             {movie.Description}
-            //         </Card.Text>
-            //         <Card.Text>
-            //             Release year: {movie.ReleaseYear}
-            //         </Card.Text>
-            //     </Card.ImgOverlay>
-            <div className="movie-view">
+            <Card className="bg-dark text-white">
+                <Card.Img variant="top" src={movie.Image} alt="movie image" />
+                <Card.Body>
+                    <Card.Title><h1>{movie.Title}</h1></Card.Title>
+                    <Card.Text>
+                        <h4>
+                            {movie.Description}
+                        </h4>
+                        Release year: {movie.ReleaseYear}
+                    </Card.Text>
+
+                    {/* movie.Filmstars.map(e => {
+
+                    }) */}
+                </Card.Body>
+                {/* <div className="movie-view">
                 <div className="movie-poster">
                     <img src={movie.Image} />
                 </div>
@@ -37,10 +41,9 @@ export class MovieView extends React.Component {
                 <div className="movie-year">
                     <span className="label">Released: </span>
                     <span className="value">{movie.ReleaseYear}</span>
-                </div>
-                <Button onClick={() => { onBackClick(null); }}>Back to list</Button>
-                {/* </Card> */}
-            </div>
+                </div> */}
+                <Button variant="warning" onClick={() => { onBackClick(null); }}>Back to list</Button>
+            </Card>
 
         );
     }

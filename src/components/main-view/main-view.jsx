@@ -89,7 +89,7 @@ export class MainView extends React.Component {
                                 className="mr-2"
                                 aria-label="Search"
                             />
-                            <Button variant="outline-success">Search</Button>
+                            <Button variant="warning">Search</Button>
                         </Form>
                         <Navbar.Toggle />
                         <Navbar.Collapse className="justify-content-end">
@@ -110,7 +110,7 @@ export class MainView extends React.Component {
                         )
 
                         : movies.map(movie => (
-                            <Col md={3} sm={6} xs={12}>
+                            <Col md={2} xs={12}>
                                 <MovieCard key={movie._id} movie={movie} onMovieClick={(newSelectedMovie) => { this.setSelectedMovie(newSelectedMovie) }} />
                             </Col>
                         ))
