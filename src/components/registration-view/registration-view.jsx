@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
+import Form from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button';
+
 export function RegistrationView(props) {
     //useState('') is the initial value of my login variable
     const [username, setUsername] = useState('');
@@ -15,25 +18,45 @@ export function RegistrationView(props) {
     };
 
     return (
-        <form>
-            <label>
-                Set Username:
-                <input type="text" value={username} onChange={e => setUsername(e.target.value)} />
-            </label>
-            <label>
-                Password:
-                <input type="password" value={password} onChange={e => setPassword(e.target.value)} />
-            </label>
-            <label>
-                Email:
-                <input type="text" value={email} onChange={e => setEmail(e.target.value)} />
-            </label>
-            <label>
-                Birthday:
-                <input type="text" value={date} onChange={e => setBirthday(e.target.value)} />
-            </label>
-            <button type="submit" onClick={handleSubmit}>Submit</button>
-        </form>
+        <Form>
+            <Form.Group>
+                <Form.Label>
+                    Set Username:
+                </Form.Label>
+                <Form.Control
+                    type="text" value={username} onChange={e => setUsername(e.target.value)}
+                />
+            </Form.Group>
+
+            <Form.Group>
+                <Form.Label>
+                    Create Password:
+                </Form.Label>
+                <Form.Control
+                    type="password" value={password} onChange={e => setPassword(e.target.value)}
+                />
+            </Form.Group>
+
+            <Form.Group>
+                <Form.Label>
+                    Email:
+                </Form.Label>
+                <Form.Control
+                    type="password" value={email} onChange={e => setEmail(e.target.value)}
+                />
+            </Form.Group>
+
+            <Form.Group>
+                <Form.Label>
+                    Birthday:
+                </Form.Label>
+                <Form.Control
+                    type="password" value={date} onChange={e => setPassword(e.target.value)}
+                />
+            </Form.Group>
+
+            <Button variant="warning " type="submit" onClick={handleSubmit}>Submit</Button>
+        </Form>
     );
 }
 

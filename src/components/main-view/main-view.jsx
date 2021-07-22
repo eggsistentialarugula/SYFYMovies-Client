@@ -6,6 +6,16 @@ import { RegistrationView } from '../registration-view/registration-view';
 import { MovieCard } from '../movie-card/movie-card';
 import { MovieView } from '../movie-view/movie-view';
 
+// React Bootstrap components
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Navbar from 'react-bootstrap/Navbar';
+import Container from 'react-bootstrap/Container';
+import Form from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button';
+
+// css file
+import './main-view.scss';
 
 export class MainView extends React.Component {
     constructor() {
@@ -69,15 +79,44 @@ export class MainView extends React.Component {
         if (movies.length === 0) return <div className="main-view" />;
 
         return (
-            <div className="main-view">
-                {/* If the state of the 'selectedMovie' is not null, that selected will be returned. Otherwise, all movies will be returned */}
-                {selectedMovie
-                    ? <MovieView movie={selectedMovie} onBackClick={newSelectedMovie => { this.setSelectedMovie(newSelectedMovie); }} />
-                    : movies.map(movie => (
-                        <MovieCard key={movie._id} movie={movie} onMovieClick={(newSelectedMovie) => { this.setSelectedMovie(newSelectedMovie) }} />
-                    ))
-                }
-            </div>
+            <>
+                <Navbar>
+                    <Container>
+                        <Form className="d-flex">
+                            <Form.Control
+                                type="search"
+                                placeholder="Search"
+                                className="mr-2"
+                                aria-label="Search"
+                            />
+                            <Button variant="outline-success">Search</Button>
+                        </Form>
+                        <Navbar.Toggle />
+                        <Navbar.Collapse className="justify-content-end">
+                            <Navbar.Text>
+                                Signed in as: {user}s
+                            </Navbar.Text>
+                        </Navbar.Collapse>
+                    </Container>
+                </Navbar>
+
+                <Row className="main-view justify-content-md-center">
+                    {/* If the state of the 'selectedMovie' is not null, that selected will be returned. Otherwise, all movies will be returned */}
+                    {selectedMovie
+                        ? (
+                            <Col md={8} >
+                                <MovieView movie={selectedMovie} onBackClick={newSelectedMovie => { this.setSelectedMovie(newSelectedMovie); }} />
+                            </Col>
+                        )
+
+                        : movies.map(movie => (
+                            <Col md={3} sm={6} xs={12}>
+                                <MovieCard key={movie._id} movie={movie} onMovieClick={(newSelectedMovie) => { this.setSelectedMovie(newSelectedMovie) }} />
+                            </Col>
+                        ))
+                    }
+                </Row>
+            </>
         );
     }
 }

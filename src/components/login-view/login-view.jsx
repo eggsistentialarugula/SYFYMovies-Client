@@ -1,6 +1,14 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
+// React Bootstrap components
+import Form from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button';
+import Row from 'react-bootstrap/Row';
+import Container from 'react-bootstrap/Container'
+
+import './login-view.scss';
+
 export function LoginView(props) {
     //useState('') is the initial value of my login variable
     const [username, setUsername] = useState('');
@@ -15,18 +23,25 @@ export function LoginView(props) {
     };
 
     return (
-        <form>
-            <label>
-                Username:
-                <input type="text" value={username} onChange={e => setUsername(e.target.value)} />
-            </label>
-            <label>
-                Password:
-                <input type="password" value={password} onChange={e => setPassword(e.target.value)} />
-            </label>
-            <button type="submit" onClick={handleSubmit}>Submit</button>
-            {/* registration button */}
-        </form>
+        <Container>
+            <Row className="justify-content-md-center">
+                <Form className="form text-center">
+                    <h1>Welcome to mySyfy Movies</h1>
+                    <Form.Text>Please login to continue</Form.Text>
+                    <Form.Group controlId="formUsername">
+                        <Form.Label> Username: </Form.Label>
+                        <Form.Control type="text" placeholder="Enter your username" value={username} onChange={e => setUsername(e.target.value)} />
+                    </Form.Group>
+
+                    <Form.Group controlId="formPassword">
+                        <Form.Label> Password: </Form.Label>
+                        <Form.Control type="password" placeholder="Enter your password" value={password} onChange={e => setPassword(e.target.value)} />
+                    </Form.Group>
+                    <Button className="formButton" type="submit" variant="warning" onClick={handleSubmit}>Login</Button>
+                    {/* registration button */}
+                </Form>
+            </Row>
+        </Container>
     );
 }
 

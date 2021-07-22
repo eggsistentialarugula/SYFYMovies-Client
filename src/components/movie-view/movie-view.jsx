@@ -1,11 +1,27 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+// react components
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card'
+
+
 export class MovieView extends React.Component {
     render() {
         const { movie, onBackClick } = this.props;
 
         return (
+            // <Card className="bg-dark text-white">
+            //     <Card.Img src={movie.Image} alt="movie image" />
+            //     <Card.ImgOverlay>
+            //         <Card.Title>{movie.Title}</Card.Title>
+            //         <Card.Text>
+            //             {movie.Description}
+            //         </Card.Text>
+            //         <Card.Text>
+            //             Release year: {movie.ReleaseYear}
+            //         </Card.Text>
+            //     </Card.ImgOverlay>
             <div className="movie-view">
                 <div className="movie-poster">
                     <img src={movie.Image} />
@@ -18,21 +34,14 @@ export class MovieView extends React.Component {
                     <span className="label">Description: </span>
                     <span className="value">{movie.Description}</span>
                 </div>
-                {/* Fix styling later */}
-                <div className="movie-genre">
-                    <span className="label">Genre: <br></br></span>
-                    <span className="value">Name: {movie.Genre.Name} - <br></br></span>
-                    <span className="value">{movie.Genre.Description}</span>
+                <div className="movie-year">
+                    <span className="label">Released: </span>
+                    <span className="value">{movie.ReleaseYear}</span>
                 </div>
-                <div className="movie-director">
-                    <span className="label">Director: </span>
-                    <span className="value">{movie.Director.Name}</span>
-                    <span className="value">{movie.Director.Bio}</span>
-                    <span className="value">{movie.Director.Birth}</span>
-                </div>
-                <button onClick={() => { onBackClick(null); }}>Back</button>
-
+                <Button onClick={() => { onBackClick(null); }}>Back to list</Button>
+                {/* </Card> */}
             </div>
+
         );
     }
 }
