@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card'
 
+import './movie-view.scss'
 
 export class MovieView extends React.Component {
     render() {
@@ -19,30 +20,23 @@ export class MovieView extends React.Component {
                         <h4>
                             {movie.Description}
                         </h4>
-                        Release year: {movie.ReleaseYear}
+
+                        <hr></hr>
+                        <h6>Release year: {movie.ReleaseYear}</h6>
+
+                        <hr></hr>
+                        <h6>Starring: </h6>
+                        <ul>
+                            {movie.Filmstars.map((item, i) => {
+                                return <li key={i}>{item}</li>
+                            })}
+                        </ul>
+
                     </Card.Text>
 
-                    {/* movie.Filmstars.map(e => {
-
-                    }) */}
                 </Card.Body>
-                {/* <div className="movie-view">
-                <div className="movie-poster">
-                    <img src={movie.Image} />
-                </div>
-                <div className="movie-title">
-                    <span className="label">Title: </span>
-                    <span className="value">{movie.Title}</span>
-                </div>
-                <div className="movie-description">
-                    <span className="label">Description: </span>
-                    <span className="value">{movie.Description}</span>
-                </div>
-                <div className="movie-year">
-                    <span className="label">Released: </span>
-                    <span className="value">{movie.ReleaseYear}</span>
-                </div> */}
-                <Button variant="warning" onClick={() => { onBackClick(null); }}>Back to list</Button>
+
+                <Button className="buttonSub" variant="warning" onClick={() => { onBackClick(null); }}>Back to list</Button>
             </Card>
 
         );
