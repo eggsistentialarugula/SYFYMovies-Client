@@ -8,6 +8,7 @@ import Row from 'react-bootstrap/Row';
 import Container from 'react-bootstrap/Container'
 
 import './login-view.scss';
+// import Logo from '../../assets/logo.svg';
 
 export function LoginView(props) {
     //useState('') is the initial value of my login variable
@@ -26,6 +27,7 @@ export function LoginView(props) {
         <Container>
             <Row className="justify-content-md-center">
                 <Form className="form text-center">
+                    {/* <img src={Logo} /> */}
                     <h1>Welcome to mySyfy Movies</h1>
                     <Form.Text>Please login to continue</Form.Text>
                     <Form.Group controlId="formUsername">

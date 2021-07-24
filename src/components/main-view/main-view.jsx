@@ -85,7 +85,7 @@ export class MainView extends React.Component {
                         <Form className="d-flex">
                             <Form.Control
                                 type="search"
-                                placeholder="Search"
+                                placeholder="Search for movie"
                                 className="mr-2"
                                 aria-label="Search"
                             />
@@ -94,7 +94,7 @@ export class MainView extends React.Component {
                         <Navbar.Toggle />
                         <Navbar.Collapse className="justify-content-end">
                             <Navbar.Text>
-                                Signed in as: {user}s
+                                Signed in as: {user}
                             </Navbar.Text>
                         </Navbar.Collapse>
                     </Container>
