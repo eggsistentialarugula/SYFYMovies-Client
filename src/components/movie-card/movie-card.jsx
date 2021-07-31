@@ -7,18 +7,24 @@ import Card from 'react-bootstrap/Card';
 
 import './movie-card.scss'
 
+import { Link } from "react-router-dom";
+
 export class MovieCard extends React.Component {
     render() {
-        const { movie, onMovieClick } = this.props;
+        const { movie, user } = this.props;
 
         return (
-            <Card className="h-100 bg-transparent card">
-                <Card.Img variant="top" src={movie.Image} />
-                <Card.Body>
-                    <Card.Title><h4>{movie.Title}</h4></Card.Title>
-                    <Button variant="warning" onClick={() => onMovieClick(movie)} className="movie-card">More Info</Button>
-                </Card.Body>
-            </Card>
+            <>
+                <Card className="h-100 bg-transparent card">
+                    <Card.Img variant="top" src={movie.Image} />
+                    <Card.Body>
+                        <Card.Title><h4>{movie.Title}</h4></Card.Title>
+                        <Link to={`/movies/${movie._id}`}>
+                            <Button variant="dark" className="movie-card">More Info</Button>
+                        </Link>
+                    </Card.Body>
+                </Card>
+            </>
         );
     }
 }
@@ -45,5 +51,4 @@ MovieCard.propTypes = {
         IMDbRating: PropTypes.string.isRequired,
         Image: PropTypes.string.isRequired
     }).isRequired,
-    onMovieClick: PropTypes.func.isRequired
 };

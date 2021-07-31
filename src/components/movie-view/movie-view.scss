@@ -1,3 +1,26 @@
-ul li{
-    list-style: none;
+*{
+    background-color: rgba(185, 211, 235, 0.048);
+}
+.card-body{
+    background-color:rgba(0,0,0,0.1);
+    top:50%;
+
+}
+
+.card-title h1{
+    margin-bottom:20px;
+}
+
+.card-text h4{
+    margin-bottom: 25px;
+}
+
+button.btn.btn-dark{
+    background-color: #1d1f229d;
+    border-color:#746b32;
+}
+button.btn.btn-dark:hover{
+    color:black;
+    background-color: #f5f5ee;
+    border-color:#2e2b15;
 }

@@ -1,42 +1,103 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import axios from 'axios';
 
 // react components
 import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card'
+import Card from 'react-bootstrap/Card';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Container from 'react-bootstrap/Container';
+
+import { Link } from "react-router-dom";
 
 import './movie-view.scss'
+import axios from 'axios';
 
 export class MovieView extends React.Component {
+    addFav(e, movie) {
+        e.preventDefault();
+        const username = localStorage.getItem('user');
+        const token = localStorage.getItem('token');
+        axios({
+            method: 'post',
+            url: `https://mmysyfymovies.herokuapp.com/users/${username}/Movies/${movie._id}`,
+            headers: { Authorization: `Bearer ${token}` },
+        }).then(() => {
+            alert(`${movie.Title} was added to your Favorites`);
+        }).catch(function (err) {
+            console.log(err);
+        });
+    }
     render() {
         const { movie, onBackClick } = this.props;
-
+        if (!movie) return null;
         return (
             <Card className="bg-dark text-white">
-                <Card.Img variant="top" src={movie.Image} alt="movie image" />
+                <Container>
+                    <Card.Img variant="top" src={movie.Image} alt="movie image" />
+                </Container>
                 <Card.Body>
                     <Card.Title><h1>{movie.Title}</h1></Card.Title>
                     <Card.Text>
                         <h4>
                             {movie.Description}
                         </h4>
+                        <hr />
+                    </Card.Text>
+                    <Card.Text>
+                        <Container>
+                            <Row>
+                                <Col><h4>Directed By</h4></Col>
+                                <Col>
+                                    <Link to={`/directors/${movie.Director.Name}`}>
+                                        <Button variant="dark"><h5>{movie.Director.Name}</h5></Button>
+                                    </Link>
+                                </Col>
+                            </Row>
 
-                        <hr></hr>
-                        <h6>Release year: {movie.ReleaseYear}</h6>
+                            <hr />
+                            <Row>
+                                <Col><h4>Genre</h4></Col>
+                                <Col>
+                                    <Link to={`/genres/${movie.Genre.Name}`}>
+                                        <Button variant="dark"><h5>{movie.Genre.Name}</h5></Button>
+                                    </Link>
+                                </Col>
 
-                        <hr></hr>
-                        <h6>Starring: </h6>
-                        <ul>
-                            {movie.Filmstars.map((item, i) => {
-                                return <li key={i}>{item}</li>
-                            })}
-                        </ul>
-
+                            </Row>
+                            <hr />
+                            <Row>
+                                <Col><h4>Starring</h4></Col>
+                                <Col>
+                                    {movie.Filmstars.map((item, i) => {
+                                        return <h5 key={i}>{item}</h5>
+                                    })}
+                                </Col>
+                            </Row>
+                            <hr />
+                            <Row>
+                                <Col><h4>Original Release</h4></Col>
+                                <Col>
+                                    <h5>{movie.ReleaseYear}</h5>
+                                </Col>
+                            </Row>
+                            <hr />
+                            <Row>
+                                <Col><h4>IMDb Rating</h4></Col>
+                                <Col>
+                                    <h5>{movie.IMDbRating}</h5>
+                                </Col>
+                            </Row>
+                        </Container>
                     </Card.Text>
 
                 </Card.Body>
 
-                <Button className="buttonSub" variant="warning" onClick={() => { onBackClick(null); }}>Back to list</Button>
+                <Button className="buttonSub" variant="dark" onClick={() => { onBackClick(null); }}>Back to list</Button>
+                <hr />
+
+                <Button variant="danger" className="favoritesButton" value={movie._id} onClick={(e) => this.addFav(e, movie)}>Add to Favorites</Button>
             </Card>
 
         );
