@@ -12,16 +12,19 @@ import Container from 'react-bootstrap/Container';
 import { Link } from "react-router-dom";
 
 import './movie-view.scss'
-import axios from 'axios';
 
 export class MovieView extends React.Component {
+    constructor() {
+        super();
+        this.state = {};
+    }
     addFav(e, movie) {
         e.preventDefault();
         const username = localStorage.getItem('user');
         const token = localStorage.getItem('token');
         axios({
             method: 'post',
-            url: `https://mmysyfymovies.herokuapp.com/users/${username}/Movies/${movie._id}`,
+            url: `https://mysyfymovies.herokuapp.com/users/${username}/Movies/${movie._id}`,
             headers: { Authorization: `Bearer ${token}` },
         }).then(() => {
             alert(`${movie.Title} was added to your Favorites`);
@@ -33,10 +36,9 @@ export class MovieView extends React.Component {
         const { movie, onBackClick } = this.props;
         if (!movie) return null;
         return (
-            <Card className="bg-dark text-white">
-                <Container>
-                    <Card.Img variant="top" src={movie.Image} alt="movie image" />
-                </Container>
+            <Card className="bg-dark movie-view">
+                <Card.Img className="moviePoster" variant="top" src={movie.Image} alt="movie image" />
+
                 <Card.Body>
                     <Card.Title><h1>{movie.Title}</h1></Card.Title>
                     <Card.Text>
@@ -97,7 +99,7 @@ export class MovieView extends React.Component {
                 <Button className="buttonSub" variant="dark" onClick={() => { onBackClick(null); }}>Back to list</Button>
                 <hr />
 
-                <Button variant="danger" className="favoritesButton" value={movie._id} onClick={(e) => this.addFav(e, movie)}>Add to Favorites</Button>
+                <Button variant="warning" className="favoritesButton" value={movie._id} onClick={(e) => this.addFav(e, movie)}>Add to Favorites</Button>
             </Card>
 
         );

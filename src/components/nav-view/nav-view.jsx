@@ -22,8 +22,6 @@ export class NavView extends React.Component {
     }
     render() {
         const { user } = this.props;
-        const moviePath = `/`;
-        const profilePath = `users/${user}`;
 
         if (!user) return null;
 
@@ -57,6 +55,7 @@ export class NavView extends React.Component {
 
             <Navbar
                 collapseOnSelect
+                className="nav-view"
                 expand="lg"
                 fixed="top">
                 {/* 
@@ -72,11 +71,11 @@ export class NavView extends React.Component {
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="ml-auto">
 
-                        <Nav.Link as={Link} to={moviePath} className="link-text">
+                        <Nav.Link as={Link} to={`/`} className="link-text">
                             Movies
                         </Nav.Link>
 
-                        <Nav.Link as={Link} to={profilePath} className="link-text">
+                        <Nav.Link as={Link} to={`/users/${user}`} className="link-text">
                             {user}'s Profile
                         </Nav.Link>
 

@@ -1,0 +1,39 @@
+.loginContainer{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+Form{
+    margin:200px 100px;
+
+    Button.formButton{
+        color: #ffeaa7;
+        background-color: #ffeaa7;
+        padding: 10px;
+        border:0;
+        background-image: linear-gradient(to left, #ffeaa7 0%, #000000 74%);
+        background-size: 200%;
+        transition: 0.6s;
+    }Button.formButton:hover{
+        background-position:right;
+        color:black;
+    }
+
+    Button.registerButton{
+        width:50%;
+        color: #ffeaa7;
+        background-color: #ffeaa7;
+        padding: 10px;
+        border:0;
+        background-image: linear-gradient(to left, #ffcaa7 0%, #570000 74%);
+        background-size: 200%;
+        transition: 0.6s;
+    }Button.registerButton:hover{
+        background-position:right;
+        color:black;
+    }
+}

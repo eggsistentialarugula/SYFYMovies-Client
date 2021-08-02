@@ -1,0 +1,47 @@
+
+button.removeFavMovie{
+    color:black;
+}
+
+.favMoviesContainer{
+    width:100%;
+}
+.updateProfile-form{
+    margin:20px;
+}
+
+.profileContainer .card{
+    background-color: rgba(0,0,0,0) !important;
+}
+
+Button.removeFavMovie{
+    width:100%;
+    color: #ffeaa7;
+    background-color: #ffeaa7;
+    padding: 10px;
+    border:0;
+    background-image: linear-gradient(to left, #ffeaa7 0%, #000000 74%);
+    background-size: 200%;
+    transition: 0.6s;
+}Button.removeFavMovie:hover{
+    background-position:right;
+    color:black;
+}
+
+Button.updateOrDeleteButton{
+    font-size:1.2rem;
+    letter-spacing: 0.1rem;
+    text-align: center;
+    margin:0 auto;
+    color: #ddffb0;
+    background-color: #ffeaa7;
+    padding: 10px;
+    border:0;
+    background-image: linear-gradient(to left, #ffcaa7 0%, #2e0000 74%);
+    background-size: 200%;
+    transition: 2s;
+}Button.updateOrDeleteButton:hover{
+    width:100%;
+    background-position:right;
+    color:black;
+}

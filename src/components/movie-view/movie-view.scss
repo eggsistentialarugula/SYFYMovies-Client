@@ -1,6 +1,13 @@
 *{
     background-color: rgba(185, 211, 235, 0.048);
 }
+.moviePoster{
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    margin: auto;
+    padding: 50px;
+}
 .card-body{
     background-color:rgba(0,0,0,0.1);
     top:50%;
@@ -16,6 +23,7 @@
 }
 
 button.btn.btn-dark{
+    margin:5px;
     background-color: #1d1f229d;
     border-color:#746b32;
 }

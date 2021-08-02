@@ -14,14 +14,14 @@ import './director-view.scss'
 
 export class DirectorView extends React.Component {
     render() {
-        const { director, onBackClick } = this.props;
+        const { movies, director, onBackClick } = this.props;
 
         return (
             <>
-                <Card className="bg-dark text-white">
-                    <Card.Body>
-                        <Card.Text>
-                            <Container>
+                <Container>
+                    <Card className="bg-dark text-white">
+                        <Card.Body>
+                            <Card.Text className="directorCardText">
                                 <Row>
                                     <Col><h1>Director Name</h1></Col>
                                     <Col><h4>{director.Name}</h4></Col>
@@ -37,13 +37,28 @@ export class DirectorView extends React.Component {
                                     <Col><h4>{director.Birth}</h4></Col>
                                 </Row>
 
-                            </Container>
-                        </Card.Text>
-                    </Card.Body>
-                    <Row>
-                        <Button className="buttonSub" variant="dark" onClick={() => { onBackClick(null); }}>Back to list</Button>
-                    </Row>
-                </Card>
+                                <hr />
+                                <Row>
+                                    <Col><h1>Director's movies:</h1></Col>
+                                    <Col>
+                                        {movies.map(m => (
+                                            <Col>
+                                                <Link to={`/movies/${m._id}`}>
+                                                    <Button variant="dark">
+                                                        <h3 key={m._id}>{m.Title}</h3>
+                                                    </Button>
+                                                </Link>
+                                            </Col>
+                                        ))}
+                                    </Col>
+                                </Row>
+                            </Card.Text>
+                        </Card.Body>
+                        <Row>
+                            <Button className="buttonSub" variant="dark" onClick={() => { onBackClick(null); }}>Back to list</Button>
+                        </Row>
+                    </Card>
+                </Container>
             </>
         );
     }
