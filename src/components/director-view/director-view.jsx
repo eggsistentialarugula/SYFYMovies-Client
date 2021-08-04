@@ -59,7 +59,7 @@ export class DirectorView extends React.Component {
 
                         </Card.Body>
 
-                        <Button className="buttonSub" variant="dark" onClick={() => { onBackClick(null); }}>Back to list</Button>
+                        <Button className="buttonSub" variant="dark" onClick={() => { onBackClick(null); }}>Back</Button>
                     </Card>
                 </Container>
             </>
