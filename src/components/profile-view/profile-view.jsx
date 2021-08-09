@@ -203,6 +203,7 @@ export class ProfileView extends React.Component {
                                 <Form.Control type="date" placeholder="Change B-Day" onChange={e => this.setBirthday(e.target.value)} />
                                 <Form.Control.Feedback type="invalid">Please enter valid birthday!</Form.Control.Feedback>
                             </Form.Group>
+
                             <Button className="updateOrDeleteButton" variant="danger" type="submit" >Update Profile</Button>
                             <hr />
                         </Form>

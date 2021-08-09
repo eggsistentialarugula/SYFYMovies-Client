@@ -1,6 +1,6 @@
 import { combineReducers } from "redux";
 
-import { SET_MOVIES, SET_FILTER, SET_USER } from "../actions/actions.jsx";
+import { SET_MOVIES, SET_FILTER, SET_USER } from "../actions/actions";
 
 function visibilityFilter(state = '', action) { //identity card
     switch (action.type) { //if the given action is unrelated to the reducer, then it should return whatever state it’s been given 

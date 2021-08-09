@@ -70,7 +70,7 @@ DirectorView.propTypes = {
     director: PropTypes.shape({
         Name: PropTypes.string.isRequired,
         Bio: PropTypes.string.isRequired,
-        Birth: PropTypes.instanceOf(Date)
+        Birth: PropTypes.string.isRequired
     }),
     onBackClick: PropTypes.func.isRequired
 };

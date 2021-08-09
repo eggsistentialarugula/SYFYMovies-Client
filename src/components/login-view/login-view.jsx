@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { setUser } from '../../actions/actions'
 import PropTypes from 'prop-types';
 
 // React Bootstrap components
@@ -23,16 +25,14 @@ export function LoginView(props) {
         axios.post('https://mysyfymovies.herokuapp.com/login', {
             Username: username,
             Password: password
-        })
-            .then(response => {
-                const data = response.data;
-                props.onLoggedIn(data);
-                console.log('login successful', data);
-            })
-            .catch(e => {
-                console.log('no such user');
-                alert('Invalid Username or Password');
-            });
+        }).then(response => {
+            const data = response.data;
+            props.onLoggedIn(data);
+            console.log('login successful', data);
+        }).catch(e => {
+            console.log('no such user');
+            alert('Invalid Username or Password');
+        });
     };
 
     return (
@@ -73,4 +73,12 @@ LoginView.propTypes = {
     }),
     onLoggedIn: PropTypes.func.isRequired
 };
+
+let mapStateToProps = (state) => {
+    return {
+        user: state.user,
+    };
+};
+
+export default connect(mapStateToProps, { setUser })(LoginView);
 
