@@ -73,3 +73,4 @@ LoginView.propTypes = {
     }),
     onLoggedIn: PropTypes.func.isRequired
 };
+
