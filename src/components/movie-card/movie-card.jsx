@@ -15,7 +15,7 @@ export class MovieCard extends React.Component {
 
         return (
             <>
-                <Card className="movieCardTitle h-100 bg-transparent card">
+                <Card className="movieCard movieCardTitle h-100 bg-transparent card">
                     <Card.Img variant="top" src={movie.Image} />
                     <Card.Body>
                         <Card.Title><h4>{movie.Title}</h4></Card.Title>

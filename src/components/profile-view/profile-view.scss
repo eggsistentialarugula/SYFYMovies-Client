@@ -13,11 +13,9 @@ button.removeFavMovie{
 .profileContainer{
     color: black;
    .card{
-    background-color: rgba(0,0,0,0) !important;
-} 
+        background-color: rgba(0,0,0,0) !important;
+    } 
 }
-
-
 
 Button.removeFavMovie{
     width:100%;
@@ -48,4 +46,13 @@ Button.updateOrDeleteButton{
     width:100%;
     background-position:right;
     color:black;
+}
+
+@media screen and (max-width: 750px){
+    h1.favMovieTitle {
+        font-size: 1.5rem;
+    }
+    h2.updateProfile{
+        font-size:1.5rem;
+    }
 }

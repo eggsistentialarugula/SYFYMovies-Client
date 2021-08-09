@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
 import axios from 'axios';
-
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 // React Bootstrap components
 import Form from 'react-bootstrap/Form';
@@ -74,3 +73,4 @@ LoginView.propTypes = {
     }),
     onLoggedIn: PropTypes.func.isRequired
 };
+

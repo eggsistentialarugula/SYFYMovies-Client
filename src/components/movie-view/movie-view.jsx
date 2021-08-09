@@ -18,6 +18,7 @@ export class MovieView extends React.Component {
         super();
         this.state = {};
     }
+
     addFav(e, movie) {
         e.preventDefault();
         const username = localStorage.getItem('user');
@@ -38,19 +39,18 @@ export class MovieView extends React.Component {
         return (
             <Card className="bg-dark movie-view">
                 <Card.Img className="moviePoster" variant="top" src={movie.Image} alt="movie image" />
-
                 <Card.Body>
                     <Card.Title><h1>{movie.Title}</h1></Card.Title>
                     <Card.Text>
-                        <h4>
+                        <p>
                             {movie.Description}
-                        </h4>
+                        </p>
                         <hr />
                     </Card.Text>
                     <Card.Text>
                         <Container>
                             <Row>
-                                <Col><h4>Directed By</h4></Col>
+                                <Col><h2>Directed By</h2></Col>
                                 <Col>
                                     <Link to={`/directors/${movie.Director.Name}`}>
                                         <Button variant="dark"><h5>{movie.Director.Name}</h5></Button>
@@ -60,7 +60,7 @@ export class MovieView extends React.Component {
 
                             <hr />
                             <Row>
-                                <Col><h4>Genre</h4></Col>
+                                <Col><h2>Genre</h2></Col>
                                 <Col>
                                     <Link to={`/genres/${movie.Genre.Name}`}>
                                         <Button variant="dark"><h5>{movie.Genre.Name}</h5></Button>
@@ -70,7 +70,7 @@ export class MovieView extends React.Component {
                             </Row>
                             <hr />
                             <Row>
-                                <Col><h4>Starring</h4></Col>
+                                <Col><h3>Starring</h3></Col>
                                 <Col>
                                     {movie.Filmstars.map((item, i) => {
                                         return <h5 key={i}>{item}</h5>

@@ -24,34 +24,33 @@ export class DirectorView extends React.Component {
                             <Card.Text>
                                 <Container>
                                     <Row>
-                                        <Col><h1>Director Name</h1></Col>
-                                        <Col><h4>{director.Name}</h4></Col>
+                                        <Col><h1>{director.Name}</h1></Col>
                                     </Row>
 
                                     <hr />
                                     <Row>
-                                        <h1>Bio</h1>
-                                        <h4>{director.Bio}</h4>
+                                        <h2>Bio</h2>
+                                        <p>{director.Bio}</p>
                                     </Row>
                                     <hr />
                                     <Row>
-                                        <Col><h1>Born</h1></Col>
-                                        <Col><h4>{director.Birth}</h4></Col>
+                                        <h3>Born</h3>
+                                        <hr />
+                                        <p>{director.Birth}</p>
+                                        <hr />
                                     </Row>
                                     <hr />
                                     <Row>
-                                        <Col><h1>Director's movies:</h1></Col>
-                                        <Col>
-                                            {movies.map(m => (
-                                                <Col>
-                                                    <Link to={`/movies/${m._id}`}>
-                                                        <Button variant="dark">
-                                                            <h3 key={m._id}>{m.Title}</h3>
-                                                        </Button>
-                                                    </Link>
-                                                </Col>
-                                            ))}
-                                        </Col>
+                                        <h4>Director's movies:</h4>
+                                        <hr />
+                                        {movies.map(m => (
+                                            <Link to={`/movies/${m._id}`}>
+                                                <Button variant="dark">
+                                                    <p key={m._id}>{m.Title}</p>
+                                                </Button>
+                                            </Link>
+                                        ))}
+                                        <hr />
                                     </Row>
                                     <hr />
                                 </Container>

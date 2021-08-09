@@ -180,7 +180,7 @@ export class ProfileView extends React.Component {
                 <hr />
                 <Card>
                     <Card.Body>
-                        <Card.Header as="h2" className="text-center">Update Your Profile</Card.Header>
+                        <Card.Header as="h2" className="updateProfile text-center">Update Your Profile</Card.Header>
                         <Form noValidate validated={validated} className="updateProfile-form"
                             onSubmit={(e) => this.updateUser(e, this.Username, this.Password, this.Email, this.Birthday)}>
                             <Form.Group controlId="formUsername">
@@ -203,7 +203,6 @@ export class ProfileView extends React.Component {
                                 <Form.Control type="date" placeholder="Change B-Day" onChange={e => this.setBirthday(e.target.value)} />
                                 <Form.Control.Feedback type="invalid">Please enter valid birthday!</Form.Control.Feedback>
                             </Form.Group>
-
                             <Button className="updateOrDeleteButton" variant="danger" type="submit" >Update Profile</Button>
                             <hr />
                         </Form>

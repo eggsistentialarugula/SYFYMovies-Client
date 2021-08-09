@@ -24,29 +24,27 @@ export class GenreView extends React.Component {
                             <Card.Text className="genreCardText">
                                 <Container>
                                     <Row>
-                                        <Col><h1>Genre</h1></Col>
-                                        <Col><h4>{genre.Name}</h4></Col>
+                                        <h1>{genre.Name}</h1>
                                     </Row>
 
                                     <hr />
                                     <Row>
-                                        <h1>Description</h1>
-                                        <h4>{genre.Description}</h4>
+                                        <h2>Description</h2>
+                                        <p>{genre.Description}</p>
                                     </Row>
                                     <hr />
                                     <Row>
-                                        <Col><h1>Syfy Movies of this Genre:</h1></Col>
-                                        <Col>
-                                            {movies.map(m => (
-                                                <Col>
-                                                    <Link to={`/movies/${m._id}`}>
-                                                        <Button variant="dark">
-                                                            <h4 key={m._id}>{m.Title}</h4>
-                                                        </Button>
-                                                    </Link>
-                                                </Col>
-                                            ))}
-                                        </Col>
+                                        <h3>Syfy Movies of this Genre:</h3>
+                                        {movies.map(m => (
+                                            <Col>
+                                                <Link to={`/movies/${m._id}`}>
+                                                    <Button variant="dark">
+                                                        <p key={m._id}>{m.Title}</p>
+                                                    </Button>
+                                                </Link>
+                                            </Col>
+                                        ))}
+
                                     </Row>
                                     <hr />
                                 </Container>

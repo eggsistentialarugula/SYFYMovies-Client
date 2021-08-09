@@ -23,3 +23,9 @@ span.navbar-text{
 div.justify-content-end.navbar-collapse.collapse{
     margin:2rem;
 }
+
+@media screen and (max-width: 500px){
+    .main-view{
+        padding-top: 20%;
+    }
+}
