@@ -31,13 +31,14 @@ This is a Single-Page Application (SPA) created with **React** library. It uses 
 * React
 * React Bootstrap
 * VS Code
+* MongoDB
+* Node.js
 
 
 # Tech
 
 * Single-Page Application (SPA)
 * State Routing is used to navigate between views and share URLs
-* Users can filter movies
 * Written in the React library ES2015+
 * Respects the Flux pattern using React Redux
 
