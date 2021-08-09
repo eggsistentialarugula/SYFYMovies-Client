@@ -36,13 +36,11 @@ export class GenreView extends React.Component {
                                     <Row>
                                         <h3>Syfy Movies of this Genre:</h3>
                                         {movies.map(m => (
-                                            <Col>
-                                                <Link to={`/movies/${m._id}`}>
-                                                    <Button variant="dark">
-                                                        <p key={m._id}>{m.Title}</p>
-                                                    </Button>
-                                                </Link>
-                                            </Col>
+                                            <Link to={`/movies/${m._id}`}>
+                                                <Button variant="dark">
+                                                    <p key={m._id}>{m.Title}</p>
+                                                </Button>
+                                            </Link>
                                         ))}
 
                                     </Row>
