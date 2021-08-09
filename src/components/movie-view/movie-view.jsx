@@ -1,39 +1,106 @@
-
 import React from 'react';
 import PropTypes from 'prop-types';
+import axios from 'axios';
+
+// react components
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Container from 'react-bootstrap/Container';
+
+import { Link } from "react-router-dom";
+
+import './movie-view.scss'
 
 export class MovieView extends React.Component {
+    constructor() {
+        super();
+        this.state = {};
+    }
+
+    addFav(e, movie) {
+        e.preventDefault();
+        const username = localStorage.getItem('user');
+        const token = localStorage.getItem('token');
+        axios({
+            method: 'post',
+            url: `https://mysyfymovies.herokuapp.com/users/${username}/Movies/${movie._id}`,
+            headers: { Authorization: `Bearer ${token}` },
+        }).then(() => {
+            alert(`${movie.Title} was added to your Favorites`);
+        }).catch(function (err) {
+            console.log(err);
+        });
+    }
     render() {
         const { movie, onBackClick } = this.props;
-
+        if (!movie) return null;
         return (
-            <div className="movie-view">
-                <div className="movie-poster">
-                    <img src={movie.Image} />
-                </div>
-                <div className="movie-title">
-                    <span className="label">Title: </span>
-                    <span className="value">{movie.Title}</span>
-                </div>
-                <div className="movie-description">
-                    <span className="label">Description: </span>
-                    <span className="value">{movie.Description}</span>
-                </div>
-                {/* Fix styling later */}
-                <div className="movie-genre">
-                    <span className="label">Genre: <br></br></span>
-                    <span className="value">Name: {movie.Genre.Name} - <br></br></span>
-                    <span className="value">{movie.Genre.Description}</span>
-                </div>
-                <div className="movie-director">
-                    <span className="label">Director: </span>
-                    <span className="value">{movie.Director.Name}</span>
-                    <span className="value">{movie.Director.Bio}</span>
-                    <span className="value">{movie.Director.Birth}</span>
-                </div>
-                <button onClick={() => { onBackClick(null); }}>Back</button>
+            <Card className="bg-dark movie-view">
+                <Card.Img className="moviePoster" variant="top" src={movie.Image} alt="movie image" />
+                <Card.Body>
+                    <Card.Title><h1>{movie.Title}</h1></Card.Title>
+                    <Card.Text>
+                        <p>
+                            {movie.Description}
+                        </p>
+                        <hr />
+                    </Card.Text>
+                    <Card.Text>
+                        <Container>
+                            <Row>
+                                <Col><h2>Directed By</h2></Col>
+                                <Col>
+                                    <Link to={`/directors/${movie.Director.Name}`}>
+                                        <Button variant="dark"><h5>{movie.Director.Name}</h5></Button>
+                                    </Link>
+                                </Col>
+                            </Row>
 
-            </div>
+                            <hr />
+                            <Row>
+                                <Col><h2>Genre</h2></Col>
+                                <Col>
+                                    <Link to={`/genres/${movie.Genre.Name}`}>
+                                        <Button variant="dark"><h5>{movie.Genre.Name}</h5></Button>
+                                    </Link>
+                                </Col>
+
+                            </Row>
+                            <hr />
+                            <Row>
+                                <Col><h3>Starring</h3></Col>
+                                <Col>
+                                    {movie.Filmstars.map((item, i) => {
+                                        return <h5 key={i}>{item}</h5>
+                                    })}
+                                </Col>
+                            </Row>
+                            <hr />
+                            <Row>
+                                <Col><h4>Original Release</h4></Col>
+                                <Col>
+                                    <h5>{movie.ReleaseYear}</h5>
+                                </Col>
+                            </Row>
+                            <hr />
+                            <Row>
+                                <Col><h4>IMDb Rating</h4></Col>
+                                <Col>
+                                    <h5>{movie.IMDbRating}</h5>
+                                </Col>
+                            </Row>
+                        </Container>
+                    </Card.Text>
+
+                </Card.Body>
+
+                <Button className="buttonSub" variant="dark" onClick={() => { onBackClick(null); }}>Back</Button>
+                <hr />
+
+                <Button variant="danger" className="favoritesButton" value={movie._id} onClick={(e) => this.addFav(e, movie)}>Add to Favorites</Button>
+            </Card>
         );
     }
 }
