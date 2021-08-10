@@ -3,6 +3,11 @@ button.removeFavMovie{
     color:black;
 }
 
+p.movieFavTitle{
+    color:black;
+    font-size: 1.4rem;
+}
+
 .favMoviesContainer{
     width:100%;
 }
@@ -18,6 +23,7 @@ button.removeFavMovie{
 }
 
 Button.removeFavMovie{
+    margin-bottom:0;
     width:100%;
     color: #ffeaa7;
     background-color: #ffeaa7;

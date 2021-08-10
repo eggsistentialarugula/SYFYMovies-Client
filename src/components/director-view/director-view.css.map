@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "AACA,AAAA,iBAAiB,CAAA;EAIb,SAAS,EAAC,MAAM;CACnB;;AALD,AACI,iBADa,CACb,EAAE,CAAA;EACA,SAAS,EAAE,MAAM;CAClB",
+    "mappings": "",
     "sources": [
         "director-view.scss"
     ],

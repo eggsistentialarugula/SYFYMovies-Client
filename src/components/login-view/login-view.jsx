@@ -39,7 +39,6 @@ export function LoginView(props) {
 
     return (
         <Container className="loginContainer">
-
             <Row className="justify-content-md-center">
                 <Form noValidate validated={validated} className="form text-center">
                     {/* <Figure.Image
@@ -56,7 +55,6 @@ export function LoginView(props) {
                         <Form.Control type="text" placeholder="Enter your username" value={username} onChange={e => setUsername(e.target.value)} pattern="[A-Za-z0-9]{5,}" required minLength="5" />
                         <Form.Control.Feedback type="invalid">Must contain numbers and/or letters and be at least 5 characters.</Form.Control.Feedback>
                     </Form.Group>
-
                     <Form.Group controlId="formPassword">
                         <Form.Label> Password: </Form.Label>
                         <Form.Control type="password" placeholder="Enter your password" value={password} onChange={e => setPassword(e.target.value)} required minLength="5" />
@@ -69,7 +67,6 @@ export function LoginView(props) {
                             <Button className="registerButton" variant="danger">Register</Button>
                         </Link>
                     </span>
-
                 </Form>
             </Row>
         </Container>
