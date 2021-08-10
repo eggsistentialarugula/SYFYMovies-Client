@@ -9,7 +9,7 @@ import Form from 'react-bootstrap/Form';
 import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
 
-import './registration-view.scss';
+import './registration-view.css';
 
 export function RegistrationView(props) {
     //useState('') is the initial value of my login variable
