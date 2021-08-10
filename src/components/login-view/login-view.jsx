@@ -40,7 +40,7 @@ export function LoginView(props) {
     return (
         <Container className="loginContainer">
             <Row className="justify-content-md-center">
-                <Form noValidate validated={validated} className="form text-center">
+                <Form noValidate validated={validated} className="loginForm form text-center">
                     {/* <Figure.Image
                         className="logo"
                         width={171}
