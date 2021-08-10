@@ -4,7 +4,8 @@
   "description": "",
   "main": "src/index.html",
   "scripts": {
-    "test": "myFlix-client"
+    "test": "myFlix-client",
+    "build": "react-scripts build && echo '/* /index.html 200' | cat >build/_redirects"
   },
   "author": "",
   "license": "ISC",
