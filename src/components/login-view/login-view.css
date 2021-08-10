@@ -1,0 +1,59 @@
+.loginContainer {
+  border-radius: 50%;
+  background-color: black;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+Form {
+  margin: 200px 100px;
+}
+
+Form .formButton {
+  width: 100%;
+  color: #ffeaa7;
+  background-color: #ffeaa7;
+  padding: 10px;
+  border: 0;
+  background-image: -webkit-gradient(linear, right top, left top, from(#ffeaa7), color-stop(74%, #00e1ff));
+  background-image: linear-gradient(to left, #ffeaa7 0%, #00e1ff 74%);
+  background-size: 200%;
+  -webkit-transition: 1.5s;
+  transition: 1.5s;
+}
+
+Form .formButton:hover {
+  background-position: right;
+  color: black;
+}
+
+Form .registerButton {
+  width: 75%;
+  color: #ffeaa7;
+  background-color: #ffeaa7;
+  padding: 10px;
+  border: 0;
+  background-image: -webkit-gradient(linear, right top, left top, from(#ffcaa7), color-stop(74%, #570000));
+  background-image: linear-gradient(to left, #ffcaa7 0%, #570000 74%);
+  background-size: 200%;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+}
+
+Form .registerButton:hover {
+  background-position: right;
+  color: black;
+}
+
+Form .form-text {
+  padding: 10px 0px 10px 0;
+}
+
+Form .form-label {
+  font-size: 20px;
+}
+/*# sourceMappingURL=login-view.css.map */

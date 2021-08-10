@@ -10,6 +10,7 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import Row from 'react-bootstrap/Row';
 import Container from 'react-bootstrap/Container';
+import Figure from 'react-bootstrap/Figure';
 
 import './login-view.scss';
 
@@ -36,9 +37,18 @@ export function LoginView(props) {
     };
 
     return (
+
         <Container className="loginContainer">
+
             <Row className="justify-content-md-center">
                 <Form noValidate validated={validated} className="form text-center">
+                    <Figure.Image
+                        className="logo"
+                        width={171}
+                        height={180}
+                        alt="171x180"
+                        src="http://cdn.entries.clios.com/styles/clio_aotw_ems_image_details_retina/s3/entry_attachments/image/39/21175/screenshot_2017-08-04_15.41.19_3.png"
+                    />
                     <h1>Welcome to mySyfy Movies</h1>
                     <Form.Text>Please login to continue</Form.Text>
                     <Form.Group controlId="formUsername">

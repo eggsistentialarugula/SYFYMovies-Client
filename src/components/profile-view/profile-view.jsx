@@ -2,11 +2,9 @@
 // Allow a user to deregister
 // Display a user's favorite movies
 // Allow a user to remove a movie from their list of favorites
-
 import React from 'react';
 import PropTypes from 'prop-types';
 import axios from 'axios';
-
 import { Link } from 'react-router-dom';
 // React Bootstrap components
 import Row from 'react-bootstrap/Row';
@@ -162,7 +160,9 @@ export class ProfileView extends React.Component {
                                             <Col xs={12} lg={4}>
                                                 <Card border="secondary">
                                                     <Card.Body>
-                                                        <Card.Img variant="top" src={m.Image} />
+                                                        <Link to={`/movies/${m._id}`}>
+                                                            <Card.Img variant="top" src={m.Image} />
+                                                        </Link>
                                                     </Card.Body>
                                                     <Card.Body>
                                                         <Card.Title>{m.Title}</Card.Title>
@@ -203,7 +203,6 @@ export class ProfileView extends React.Component {
                                 <Form.Control type="date" placeholder="Change B-Day" onChange={e => this.setBirthday(e.target.value)} />
                                 <Form.Control.Feedback type="invalid">Please enter valid birthday!</Form.Control.Feedback>
                             </Form.Group>
-
                             <Button className="updateOrDeleteButton" variant="danger" type="submit" >Update Profile</Button>
                             <hr />
                         </Form>

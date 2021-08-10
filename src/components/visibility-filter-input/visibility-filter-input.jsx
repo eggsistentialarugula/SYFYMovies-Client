@@ -1,8 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-
 import Form from 'react-bootstrap/Form';
-
 import { setFilter } from '../../actions/actions';
 import './visibility-filter-input.scss';
 
@@ -13,9 +11,7 @@ function VisibilityFilterInput(props) {
         value={props.visibilityFilter}
         placeholder="Filter Movies..."
     />;
-
 }
-
 export default connect(
     null,
     { setFilter }

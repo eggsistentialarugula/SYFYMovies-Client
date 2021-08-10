@@ -1,0 +1,48 @@
+.loginContainer {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+Form {
+  margin: 200px 100px;
+}
+
+Form Button.formButton {
+  color: #ffeaa7;
+  background-color: #ffeaa7;
+  padding: 10px;
+  border: 0;
+  background-image: -webkit-gradient(linear, right top, left top, from(#ffeaa7), color-stop(74%, #000000));
+  background-image: linear-gradient(to left, #ffeaa7 0%, #000000 74%);
+  background-size: 200%;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+}
+
+Form Button.formButton:hover {
+  background-position: right;
+  color: black;
+}
+
+Form Button.registerButton {
+  width: 50%;
+  color: #ffeaa7;
+  background-color: #ffeaa7;
+  padding: 10px;
+  border: 0;
+  background-image: -webkit-gradient(linear, right top, left top, from(#ffcaa7), color-stop(74%, #570000));
+  background-image: linear-gradient(to left, #ffcaa7 0%, #570000 74%);
+  background-size: 200%;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+}
+
+Form Button.registerButton:hover {
+  background-position: right;
+  color: black;
+}
+/*# sourceMappingURL=registration-view.css.map */

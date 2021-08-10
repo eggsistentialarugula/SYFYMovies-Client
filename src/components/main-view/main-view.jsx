@@ -1,28 +1,23 @@
 import React from 'react';
 import axios from 'axios';
 import PropTypes from "prop-types";
-
 import { connect } from 'react-redux';
-
 import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
 
-import { setMovies } from '../../actions/actions';
+import { setMovies, setUser } from '../../actions/actions';
 
 import MoviesList from '../movies-list/movies-list.jsx';
 import { LoginView } from '../login-view/login-view';
 import { RegistrationView } from '../registration-view/registration-view';
-// import { MovieCard } from '../movie-card/movie-card';
 import { MovieView } from '../movie-view/movie-view';
 import { DirectorView } from '../director-view/director-view';
 import { GenreView } from '../genre-view/genre-view';
 import { NavView } from '../nav-view/nav-view';
 import { ProfileView } from '../profile-view/profile-view';
-
 // React Bootstrap components
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
-
 // css file
 import './main-view.scss';
 
@@ -36,7 +31,6 @@ class MainView extends React.Component {
             // registered: true
         };
     }
-
     getMovies(token) {
         axios.get('https://mysyfymovies.herokuapp.com/movies', {
             headers: { Authorization: `Bearer ${token}` }
@@ -49,7 +43,6 @@ class MainView extends React.Component {
                 console.log(error);
             });
     }
-
     componentDidMount() {
         // code executed right after the component is added to the DOM.
         let accessToken = localStorage.getItem('token'); //if access token is present then it means the user has logged in
@@ -60,7 +53,6 @@ class MainView extends React.Component {
             this.getMovies(accessToken);
         }
     }
-
     // this menthod will update the user state of the MainView component and will be called when the user has successfully logged in
     onLoggedIn(authData) {
         console.log(authData);
@@ -72,7 +64,6 @@ class MainView extends React.Component {
         localStorage.setItem('user', authData.user.Username);
         this.getMovies(authData.token);
     }
-
     render() {
         let { movies } = this.props;
         let { user } = this.state;
@@ -168,4 +159,4 @@ let mapStateToProps = state => {
     return { movies: state.movies }
 }
 
-export default connect(mapStateToProps, { setMovies })(MainView);
+export default connect(mapStateToProps, { setMovies, setUser })(MainView);

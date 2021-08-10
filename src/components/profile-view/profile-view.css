@@ -1,0 +1,68 @@
+button.removeFavMovie {
+  color: black;
+}
+
+.favMoviesContainer {
+  width: 100%;
+}
+
+.updateProfile-form {
+  margin: 20px;
+}
+
+.profileContainer {
+  color: black;
+}
+
+.profileContainer .card {
+  background-color: rgba(0, 0, 0, 0) !important;
+}
+
+Button.removeFavMovie {
+  width: 100%;
+  color: #ffeaa7;
+  background-color: #ffeaa7;
+  padding: 10px;
+  border: 0;
+  background-image: -webkit-gradient(linear, right top, left top, from(#ffeaa7), color-stop(74%, #000000));
+  background-image: linear-gradient(to left, #ffeaa7 0%, #000000 74%);
+  background-size: 200%;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+}
+
+Button.removeFavMovie:hover {
+  background-position: right;
+  color: black;
+}
+
+Button.updateOrDeleteButton {
+  font-size: 1.1rem;
+  text-align: center;
+  margin: 0 auto;
+  color: #f9fff0;
+  background-color: #ffeaa7;
+  padding: 10px;
+  border: 0;
+  background-image: -webkit-gradient(linear, right top, left top, from(#ffcaa7), color-stop(74%, #2e0000));
+  background-image: linear-gradient(to left, #ffcaa7 0%, #2e0000 74%);
+  background-size: 200%;
+  -webkit-transition: 1.1s;
+  transition: 1.1s;
+}
+
+Button.updateOrDeleteButton:hover {
+  width: 100%;
+  background-position: right;
+  color: black;
+}
+
+@media screen and (max-width: 750px) {
+  h1.favMovieTitle {
+    font-size: 1.5rem;
+  }
+  h2.updateProfile {
+    font-size: 1.5rem;
+  }
+}
+/*# sourceMappingURL=profile-view.css.map */

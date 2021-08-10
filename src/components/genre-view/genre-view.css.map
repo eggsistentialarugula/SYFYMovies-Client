@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,cAAc,CAAA;EAIV,SAAS,EAAC,MAAM;CACnB;;AALD,AACI,cADU,CACV,EAAE,CAAA;EACA,SAAS,EAAE,MAAM;CAClB",
+    "sources": [
+        "genre-view.scss"
+    ],
+    "names": [],
+    "file": "genre-view.css"
+}

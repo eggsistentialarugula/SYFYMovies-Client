@@ -1,0 +1,54 @@
+p {
+  font-size: 20px;
+}
+
+.moviePoster {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  margin: auto;
+  padding: 50px;
+}
+
+.card-body {
+  background-color: rgba(0, 0, 0, 0.1);
+  top: 50%;
+}
+
+.card-title h1 {
+  margin-bottom: 20px;
+}
+
+.card-text h4 {
+  margin-bottom: 25px;
+}
+
+button.btn.btn-dark {
+  margin: 5px;
+  background-color: #1d1f229d;
+  border-color: #746b32;
+}
+
+button.btn.btn-dark:hover {
+  color: black;
+  background-color: #f5f5ee;
+  border-color: #2e2b15;
+}
+
+Button.favoritesButton {
+  color: #ffeaa7;
+  background-color: #ffeaa7;
+  padding: 10px;
+  border: 0;
+  background-image: -webkit-gradient(linear, right top, left top, from(#ffcaa7), color-stop(74%, #570000));
+  background-image: linear-gradient(to left, #ffcaa7 0%, #570000 74%);
+  background-size: 200%;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+}
+
+Button.favoritesButton:hover {
+  background-position: right;
+  color: black;
+}
+/*# sourceMappingURL=movie-view.css.map */
