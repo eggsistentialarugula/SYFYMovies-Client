@@ -13,7 +13,7 @@ import Container from 'react-bootstrap/Container';
 import Figure from 'react-bootstrap/Figure';
 
 import './login-view.scss';
-import Logo from 'url:~/src/images/logo1.png';
+// import Logo from 'url:~/src/images/logo1.png';
 
 export function LoginView(props) {
     //useState('') is the initial value of my login variable
@@ -42,13 +42,13 @@ export function LoginView(props) {
 
             <Row className="justify-content-md-center">
                 <Form noValidate validated={validated} className="form text-center">
-                    <Figure.Image
+                    {/* <Figure.Image
                         className="logo"
                         width={171}
                         height={180}
                         alt="171x180"
-                        src={Logo}
-                    />
+                    src={Logo}
+                    /> */}
                     <h1>Welcome to mySyfy Movies</h1>
                     <Form.Text>Please login to continue</Form.Text>
                     <Form.Group controlId="formUsername">
