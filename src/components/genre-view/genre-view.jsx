@@ -34,7 +34,7 @@ export class GenreView extends React.Component {
                                     </Row>
                                     <hr />
                                     <Row>
-                                        <h3 className="leftCol">Syfy Movies of this Genre:</h3>
+                                        <h3 className="leftCol">Syfy Movies of this Genre</h3>
                                         {movies.map(m => (
                                             <Link to={`/movies/${m._id}`}>
                                                 <Button variant="dark">

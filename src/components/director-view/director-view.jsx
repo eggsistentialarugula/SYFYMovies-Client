@@ -41,7 +41,7 @@ export class DirectorView extends React.Component {
                                     </Row>
                                     <hr />
                                     <Row>
-                                        <h4 className="leftCol">Director's movies:</h4>
+                                        <h4 className="leftCol">Director's movies</h4>
                                         <hr />
                                         {movies.map(m => (
                                             <Link to={`/movies/${m._id}`}>
