@@ -5,7 +5,9 @@ p{
     font-size:20px;
     color:rgb(255, 255, 249)
 }
-
+p.rightCol{
+    margin-bottom:0;
+}
 .leftCol{
     color:#b8a529;
 }
@@ -31,13 +33,7 @@ p{
 
 button.btn.btn-dark{
     margin:5px;
-    background-color: #1d1f229d;
     border-color:#746b32;
-}
-button.btn.btn-dark:hover{
-    color:black;
-    background-color: #f5f5ee;
-    border-color:#2e2b15;
 }
 
 Button.favoritesButton{

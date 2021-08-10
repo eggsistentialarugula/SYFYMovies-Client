@@ -12,7 +12,7 @@ import Row from 'react-bootstrap/Row';
 import Container from 'react-bootstrap/Container';
 import Figure from 'react-bootstrap/Figure';
 
-import './login-view.scss';
+import './login-view.css';
 // import Logo from 'url:~/src/images/logo1.png';
 
 export function LoginView(props) {

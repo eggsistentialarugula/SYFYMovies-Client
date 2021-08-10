@@ -11,7 +11,7 @@ import Container from 'react-bootstrap/Container';
 
 import { Link } from "react-router-dom";
 
-import './movie-view.scss'
+import './movie-view.css'
 
 export class MovieView extends React.Component {
     constructor() {

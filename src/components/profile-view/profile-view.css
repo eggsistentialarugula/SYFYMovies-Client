@@ -2,6 +2,11 @@ button.removeFavMovie {
   color: black;
 }
 
+p.movieFavTitle {
+  color: black;
+  font-size: 1.4rem;
+}
+
 .favMoviesContainer {
   width: 100%;
 }
@@ -18,9 +23,9 @@ button.removeFavMovie {
   background-color: rgba(0, 0, 0, 0) !important;
 }
 
-Button.removeFavMovie {
+button.removeFavMovie.btn.btn-warning {
+  margin-bottom: 0;
   width: 100%;
-  color: #ffeaa7;
   background-color: #ffeaa7;
   padding: 10px;
   border: 0;
@@ -31,8 +36,16 @@ Button.removeFavMovie {
   transition: 0.6s;
 }
 
-Button.removeFavMovie:hover {
+button.removeFavMovie.btn.btn-warning p {
+  color: #ffeaa7;
+  margin-bottom: 0;
+}
+
+button.removeFavMovie.btn.btn-warning:hover {
   background-position: right;
+}
+
+button.removeFavMovie.btn.btn-warning:hover p {
   color: black;
 }
 
@@ -69,6 +82,10 @@ Button.updateOrDeleteButton:hover {
 img.card-img-top.movieImg {
   height: 50%;
   width: 50%;
+}
+
+p.noFavMovies.card-text {
+  color: #3a3400;
 }
 
 @media screen and (max-width: 990px) {

@@ -10,7 +10,7 @@ import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Card from 'react-bootstrap/Card';
 
-import './genre-view.scss'
+import './genre-view.css'
 
 export class GenreView extends React.Component {
     render() {

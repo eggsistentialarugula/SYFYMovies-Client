@@ -10,7 +10,7 @@ import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Card from 'react-bootstrap/Card';
 
-import './director-view.scss'
+import './director-view.css'
 
 export class DirectorView extends React.Component {
     render() {

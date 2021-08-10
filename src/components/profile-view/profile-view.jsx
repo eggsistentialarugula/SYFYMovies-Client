@@ -14,7 +14,7 @@ import Form from 'react-bootstrap/Form';
 import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
 
-import './profile-view.scss';
+import './profile-view.css';
 
 export class ProfileView extends React.Component {
     constructor() {

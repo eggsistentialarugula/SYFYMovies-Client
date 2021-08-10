@@ -7,7 +7,6 @@ p.movieFavTitle{
     color:black;
     font-size: 1.4rem;
 }
-
 .favMoviesContainer{
     width:100%;
 }
@@ -22,19 +21,24 @@ p.movieFavTitle{
     } 
 }
 
-Button.removeFavMovie{
+button.removeFavMovie.btn.btn-warning{
     margin-bottom:0;
     width:100%;
-    color: #ffeaa7;
     background-color: #ffeaa7;
     padding: 10px;
     border:0;
     background-image: linear-gradient(to left, #ffeaa7 0%, #000000 74%);
     background-size: 200%;
     transition: 0.6s;
-}Button.removeFavMovie:hover{
+    p{
+        color: #ffeaa7;
+        margin-bottom:0;
+    }
+}button.removeFavMovie.btn.btn-warning:hover{
     background-position:right;
-    color:black;
+    p{
+        color:black;
+    }
 }
 
 Button.updateOrDeleteButton{

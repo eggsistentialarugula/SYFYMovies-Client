@@ -1,20 +1,14 @@
-.loginContainer {
-  width: 100%;
-  border-radius: 40%;
-  background-color: #130046;
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+form.form.text-center.was-validated {
+  margin: 0 auto;
 }
 
-Form {
-  margin: 200px 100px;
+Form.loginForm {
+  background-color: rgba(165, 201, 255, 0.185);
+  padding: 10rem;
+  border-radius: 50%;
 }
 
-Form .formButton {
+Form.loginForm .formButton {
   width: 100%;
   color: #ffeaa7;
   background-color: #ffeaa7;
@@ -23,16 +17,16 @@ Form .formButton {
   background-image: -webkit-gradient(linear, right top, left top, from(#ffeaa7), color-stop(74%, #000000));
   background-image: linear-gradient(to left, #ffeaa7 0%, #000000 74%);
   background-size: 200%;
-  -webkit-transition: 1.5s;
-  transition: 1.5s;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
 }
 
-Form .formButton:hover {
+Form.loginForm .formButton:hover {
   background-position: right;
   color: black;
 }
 
-Form .registerButton {
+Form.loginForm .registerButton {
   width: 75%;
   color: #ffeaa7;
   background-color: #ffeaa7;
@@ -45,16 +39,16 @@ Form .registerButton {
   transition: 0.6s;
 }
 
-Form .registerButton:hover {
+Form.loginForm .registerButton:hover {
   background-position: right;
   color: black;
 }
 
-Form .form-text {
+Form.loginForm .form-text {
   padding: 10px 0px 10px 0;
 }
 
-Form .form-label {
+Form.loginForm .form-label {
   font-size: 20px;
 }
 
