@@ -1,6 +1,6 @@
 .loginContainer{
     border-radius: 50%;
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(19, 0, 70);
     margin: 0;
     position: absolute;
     top: 50%;
@@ -17,7 +17,7 @@ Form{
         background-color: #ffeaa7;
         padding: 10px;
         border:0;
-        background-image: linear-gradient(to left, #ffeaa7 0%, #00e1ff 74%);
+        background-image: linear-gradient(to left, #ffeaa7 0%, #000000 74%);
         background-size: 200%;
         transition: 1.5s;
     }.formButton:hover{
@@ -45,4 +45,8 @@ Form{
     .form-label{
         font-size:20px;
     }
+}
+
+Figure.Image.logo{
+    border-radius: 10px;
 }

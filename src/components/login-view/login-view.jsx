@@ -13,6 +13,7 @@ import Container from 'react-bootstrap/Container';
 import Figure from 'react-bootstrap/Figure';
 
 import './login-view.scss';
+import Logo from 'url:~/src/images/logo1.png';
 
 export function LoginView(props) {
     //useState('') is the initial value of my login variable
@@ -37,7 +38,6 @@ export function LoginView(props) {
     };
 
     return (
-
         <Container className="loginContainer">
 
             <Row className="justify-content-md-center">
@@ -47,7 +47,7 @@ export function LoginView(props) {
                         width={171}
                         height={180}
                         alt="171x180"
-                        src="http://cdn.entries.clios.com/styles/clio_aotw_ems_image_details_retina/s3/entry_attachments/image/39/21175/screenshot_2017-08-04_15.41.19_3.png"
+                        src={Logo}
                     />
                     <h1>Welcome to mySyfy Movies</h1>
                     <Form.Text>Please login to continue</Form.Text>
