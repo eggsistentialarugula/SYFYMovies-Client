@@ -68,6 +68,11 @@ img.card-img-top.movieImg{
     width:50%;
 }
 
+p.noFavMovies.card-text{
+    color:rgb(58, 52, 0);
+
+}
+
 @media screen and (max-width:990px){
     img.card-img-top.movieImg{
         height:100%;

@@ -148,7 +148,7 @@ export class ProfileView extends React.Component {
                     <Card.Header as="h1" className="favMovieTitle">{username}'s Favorite Movies</Card.Header>
                     <Card.Body>
                         {FavoriteMovies.length === 0 &&
-                            <Card.Text>
+                            <Card.Text className="noFavMovies">
                                 You have not favorited any movies.
                             </Card.Text>
                         }
