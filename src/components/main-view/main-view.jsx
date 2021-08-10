@@ -73,7 +73,7 @@ class MainView extends React.Component {
                 <Router>
                     <NavView user={user} />
                     {/* Start of Main view, login view */}
-                    <Row className="main-view">
+                    <Row className="main-view justify-content-md-center text-white">
                         <Route exact path="/" render={() => {
                             if (!user) return (
                                 <LoginView onLoggedIn={user => this.onLoggedIn(user)} />
