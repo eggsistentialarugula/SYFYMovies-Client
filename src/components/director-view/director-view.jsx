@@ -24,29 +24,29 @@ export class DirectorView extends React.Component {
                             <Card.Text>
                                 <Container>
                                     <Row>
-                                        <Col><h1>{director.Name}</h1></Col>
+                                        <Col><h1 className="leftCol">{director.Name}</h1></Col>
                                     </Row>
 
                                     <hr />
                                     <Row>
-                                        <h2>Bio</h2>
-                                        <p>{director.Bio}</p>
+                                        <h2 className="leftCol">Bio</h2>
+                                        <p className="rightCol">{director.Bio}</p>
                                     </Row>
                                     <hr />
                                     <Row>
-                                        <h3>Born</h3>
+                                        <h3 className="leftCol">Born</h3>
                                         <hr />
-                                        <p>{director.Birth}</p>
+                                        <p className="rightCol">{director.Birth}</p>
                                         <hr />
                                     </Row>
                                     <hr />
                                     <Row>
-                                        <h4>Director's movies:</h4>
+                                        <h4 className="leftCol">Director's movies:</h4>
                                         <hr />
                                         {movies.map(m => (
                                             <Link to={`/movies/${m._id}`}>
                                                 <Button variant="dark">
-                                                    <p key={m._id}>{m.Title}</p>
+                                                    <p className="rightCol" key={m._id}>{m.Title}</p>
                                                 </Button>
                                             </Link>
                                         ))}

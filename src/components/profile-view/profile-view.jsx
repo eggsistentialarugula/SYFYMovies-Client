@@ -159,16 +159,16 @@ export class ProfileView extends React.Component {
                                     const findFavMovie = FavoriteMovies.find(element => element === m._id)
                                     if (findFavMovie === m._id) {
                                         return (
-                                            <Col xs={12} lg={4}>
+                                            <Col xs={12} lg={12}>
                                                 <Card border="secondary">
                                                     <Card.Body>
                                                         <Link to={`/movies/${m._id}`}>
-                                                            <Card.Img variant="top" src={m.Image} />
+                                                            <Card.Img className="movieImg" variant="top" src={m.Image} />
                                                         </Link>
                                                     </Card.Body>
                                                     <Card.Body>
-                                                        <Card.Title>{m.Title}</Card.Title>
-                                                        <Button variant="warning" className="removeFavMovie" onClick={(e) => this.removeFavMovie(e, m._id)}>Remove From Favorites</Button>
+                                                        <p className="movieFavTitle">{m.Title}</p>
+                                                        <Button variant="warning" className="removeFavMovie" onClick={(e) => this.removeFavMovie(e, m._id)}><p>Remove From Favorites</p></Button>
                                                     </Card.Body>
                                                 </Card>
                                             </Col>

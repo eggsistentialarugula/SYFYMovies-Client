@@ -65,4 +65,28 @@ Button.updateOrDeleteButton:hover {
     font-size: 1.5rem;
   }
 }
+
+img.card-img-top.movieImg {
+  height: 50%;
+  width: 50%;
+}
+
+@media screen and (max-width: 990px) {
+  img.card-img-top.movieImg {
+    height: 100%;
+    width: 100%;
+  }
+  h1.favMovieTitle {
+    font-size: 1.2rem;
+  }
+  h2.updateProfile {
+    font-size: 1.2rem;
+  }
+  p.movieFavTitle {
+    font-size: 1rem;
+  }
+  button.removeFavMovie.btn.btn-warning p {
+    font-size: 0.9rem;
+  }
+}
 /*# sourceMappingURL=profile-view.css.map */

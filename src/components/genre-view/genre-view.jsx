@@ -24,21 +24,21 @@ export class GenreView extends React.Component {
                             <Card.Text className="genreCardText">
                                 <Container>
                                     <Row>
-                                        <h1>{genre.Name}</h1>
+                                        <h1 className="leftCol">{genre.Name}</h1>
                                     </Row>
 
                                     <hr />
                                     <Row>
-                                        <h2>Description</h2>
-                                        <p>{genre.Description}</p>
+                                        <h2 className="leftCol">Description</h2>
+                                        <p className="rightCol">{genre.Description}</p>
                                     </Row>
                                     <hr />
                                     <Row>
-                                        <h3>Syfy Movies of this Genre:</h3>
+                                        <h3 className="leftCol">Syfy Movies of this Genre:</h3>
                                         {movies.map(m => (
                                             <Link to={`/movies/${m._id}`}>
                                                 <Button variant="dark">
-                                                    <p key={m._id}>{m.Title}</p>
+                                                    <p className="rightCol" key={m._id}>{m.Title}</p>
                                                 </Button>
                                             </Link>
                                         ))}

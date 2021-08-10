@@ -40,9 +40,9 @@ export class MovieView extends React.Component {
             <Card className="bg-dark movie-view">
                 <Card.Img className="moviePoster" variant="top" src={movie.Image} alt="movie image" />
                 <Card.Body>
-                    <Card.Title><h1>{movie.Title}</h1></Card.Title>
+                    <Card.Title><h1 className="leftCol">{movie.Title}</h1></Card.Title>
                     <Card.Text>
-                        <p>
+                        <p className="rightCol">
                             {movie.Description}
                         </p>
                         <hr />
@@ -50,45 +50,45 @@ export class MovieView extends React.Component {
                     <Card.Text>
                         <Container>
                             <Row>
-                                <Col><h2>Directed By</h2></Col>
+                                <Col><h2 className="leftCol">Directed By</h2></Col>
                                 <Col>
                                     <Link to={`/directors/${movie.Director.Name}`}>
-                                        <Button variant="dark"><h5>{movie.Director.Name}</h5></Button>
+                                        <Button variant="dark"><p className="rightCol">{movie.Director.Name}</p></Button>
                                     </Link>
                                 </Col>
                             </Row>
 
                             <hr />
                             <Row>
-                                <Col><h2>Genre</h2></Col>
+                                <Col><h2 className="leftCol">Genre</h2></Col>
                                 <Col>
                                     <Link to={`/genres/${movie.Genre.Name}`}>
-                                        <Button variant="dark"><h5>{movie.Genre.Name}</h5></Button>
+                                        <Button variant="dark"><p className="rightCol">{movie.Genre.Name}</p></Button>
                                     </Link>
                                 </Col>
 
                             </Row>
                             <hr />
                             <Row>
-                                <Col><h3>Starring</h3></Col>
+                                <Col><h3 className="leftCol">Starring</h3></Col>
                                 <Col>
                                     {movie.Filmstars.map((item, i) => {
-                                        return <h5 key={i}>{item}</h5>
+                                        return <p className="rightCol" key={i}>{item}</p>
                                     })}
                                 </Col>
                             </Row>
                             <hr />
                             <Row>
-                                <Col><h4>Original Release</h4></Col>
+                                <Col><h4 className="leftCol">Original Release</h4></Col>
                                 <Col>
-                                    <h5>{movie.ReleaseYear}</h5>
+                                    <p className="rightCol">{movie.ReleaseYear}</p>
                                 </Col>
                             </Row>
                             <hr />
                             <Row>
-                                <Col><h4>IMDb Rating</h4></Col>
+                                <Col><h4 className="leftCol">IMDb Rating</h4></Col>
                                 <Col>
-                                    <h5>{movie.IMDbRating}</h5>
+                                    <p className="rightCol">{movie.IMDbRating}</p>
                                 </Col>
                             </Row>
                         </Container>
