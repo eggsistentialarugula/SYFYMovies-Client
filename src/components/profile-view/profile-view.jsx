@@ -91,7 +91,7 @@ export class ProfileView extends React.Component {
                 Birthday: response.data.Birthday
             });
             localStorage.setItem('user', this.state.Username);
-            // window.open(`/users/${username}`, '_self');
+            window.open(`/users/${username}`, '_self');
         }).catch(function (error) {
             console.log(error);
         });
@@ -113,6 +113,7 @@ export class ProfileView extends React.Component {
             localStorage.removeItem('user');
             localStorage.removeItem('token');
             alert('{user}\'s account has been deleted.');
+            window.location.plathname = '/';
             // location.reload();
         }).catch((e) => {
             console.log(e)
