@@ -127,9 +127,8 @@ export class ProfileView extends React.Component {
         axios.delete(`https://mysyfymovies.herokuapp.com/users/${username}/Movies/${movie}`, {
             headers: { Authorization: `Bearer ${token}` },
         }).then(() => {
-            alert('Removed from favorites.');
             this.componentDidMount();
-            location.reload();
+            alert('Removed from favorites.');
         }).catch(function (error) {
             console.log(error);
         });
