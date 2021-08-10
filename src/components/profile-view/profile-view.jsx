@@ -91,7 +91,8 @@ export class ProfileView extends React.Component {
                 Birthday: response.data.Birthday
             });
             localStorage.setItem('user', this.state.Username);
-            window.open('/', '_self');
+            this.componentDidMount();
+            // window.open(`/users/${username}`, '_self');
         }).catch(function (error) {
             console.log(error);
         });
@@ -110,10 +111,10 @@ export class ProfileView extends React.Component {
         axios.delete(`https://mysyfymovies.herokuapp.com/users/${username}`, {
             headers: { Authorization: `Bearer ${token}` },
         }).then(() => {
+            alert('Your account has been deleted.');
             localStorage.removeItem('user');
             localStorage.removeItem('token');
-            alert('{user}\'s account has been deleted.');
-            window.location.plathname = '/';
+            window.location.pathname = "/";
             // location.reload();
         }).catch((e) => {
             console.log(e)
@@ -128,8 +129,9 @@ export class ProfileView extends React.Component {
         axios.delete(`https://mysyfymovies.herokuapp.com/users/${username}/Movies/${movie}`, {
             headers: { Authorization: `Bearer ${token}` },
         }).then(() => {
-            this.componentDidMount();
             alert('Removed from favorites.');
+            this.componentDidMount();
+            // location.reload();
         }).catch(function (error) {
             console.log(error);
         });

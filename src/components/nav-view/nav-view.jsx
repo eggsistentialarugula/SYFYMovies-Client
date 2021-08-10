@@ -36,7 +36,7 @@ export class NavView extends React.Component {
                             Movies
                         </Nav.Link>
                         <Nav.Link as={Link} to={`/users/${user}`} className="link-text">
-                            {user}'s Profile
+                            Profile
                         </Nav.Link>
                         <Button className="logoutButton" variant="dark" onClick={() => this.onLoggedOut()}>Logout</Button>
                     </Nav>
