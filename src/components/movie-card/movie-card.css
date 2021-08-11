@@ -23,4 +23,18 @@ img.card-img-top {
 div.col-lg-4.col-md-6.col-12 {
   margin-bottom: 15px;
 }
+
+button.movie-card {
+  width: 100%;
+}
+
+img.movieCardImg {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+img.movieCardImg:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
 /*# sourceMappingURL=movie-card.css.map */

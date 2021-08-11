@@ -25,5 +25,11 @@ div.col-lg-4.col-md-6.col-12{
 }
 
 button.movie-card{
-    
+    width:100%;
+}
+img.movieCardImg{
+    transition: 0.2s;
+}
+img.movieCardImg:hover{
+    transform:scale(1.2);
 }

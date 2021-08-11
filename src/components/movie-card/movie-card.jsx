@@ -17,7 +17,7 @@ export class MovieCard extends React.Component {
             <>
                 <Card className="movieCard movieCardTitle h-100 bg-transparent card">
                     {/* <Link to={`/movies/${movie._id}`}> */}
-                    <Card.Img variant="top" src={movie.Image} />
+                    <Card.Img className="movieCardImg" variant="top" src={movie.Image} />
                     {/* </Link> */}
                     <Card.Body>
                         <Card.Title><h4>{movie.Title}</h4></Card.Title>
