@@ -99,6 +99,9 @@ export class MovieView extends React.Component {
                 <Button className="buttonSub" variant="dark" onClick={() => { onBackClick(null); }}>Back</Button>
                 <hr />
 
+                <Button className="buttonSub" variant="dark" onClick={() => { onBackClick(null); }}>Back to Homepage</Button>
+                <hr />
+
                 <Button variant="danger" className="favoritesButton" value={movie._id} onClick={(e) => this.addFav(e, movie)}>Add to Favorites</Button>
             </Card>
         );

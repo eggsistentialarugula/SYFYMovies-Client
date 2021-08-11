@@ -73,8 +73,6 @@ export function RegistrationView(props) {
                 </Form>
             </Row>
         </Container>
-
-
     );
 }
 
