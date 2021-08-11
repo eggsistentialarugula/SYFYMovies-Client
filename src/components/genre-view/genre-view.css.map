@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "",
+    "mappings": "AAOA,AAAA,GAAG,AAAA,aAAa,CAAA;EACZ,MAAM,EAAC,GAAG;EACV,KAAK,EAAC,GAAG;CACZ",
     "sources": [
         "genre-view.scss"
     ],
