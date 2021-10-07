@@ -67,6 +67,13 @@ export function LoginView(props) {
                             <Button className="registerButton" variant="danger">Register</Button>
                         </Link>
                     </span>
+                    <span>
+                        <Form.Text><h5>Use this login information to take a look:</h5></Form.Text>
+                        <p>
+                            Username: testuser <br></br>
+                            Password: testuserpw
+                        </p>
+                    </span>
                 </Form>
             </Row>
         </Container>
