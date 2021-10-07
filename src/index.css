@@ -3,7 +3,7 @@
   letter-spacing: 0.03rem;
 }
 
-h1.syfy-title {
+.syfy-title {
   font-family: 'Black Ops One', cursive;
   color: #fff454;
   -webkit-text-stroke: .55px #000;
