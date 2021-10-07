@@ -6,7 +6,12 @@
 .syfy-title {
   font-family: 'Black Ops One', cursive;
   color: #fff454;
-  -webkit-text-stroke: .55px #000;
+  -webkit-text-stroke: 1.6px #000;
+  font-size: 3.2rem;
+}
+
+.welcome-text {
+  font-size: 2rem;
 }
 
 hr {
