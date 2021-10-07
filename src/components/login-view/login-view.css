@@ -1,5 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap");
 form.form.text-center.was-validated {
   margin: 0 auto;
+}
+
+h1.syfy-title {
+  font-family: 'Black Ops One', cursive;
+  color: #fff454;
+  -webkit-text-stroke: .55px #000;
 }
 
 Form.loginForm {
