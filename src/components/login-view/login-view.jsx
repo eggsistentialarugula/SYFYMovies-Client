@@ -48,7 +48,7 @@ export function LoginView(props) {
                         alt="171x180"
                     src={Logo}
                     /> */}
-                    <h1>Welcome to mySyfy Movies</h1>
+                    <h1>Welcome to <span className = "syfy-title">mySyfy Movies</span> </h1>
                     <Form.Text>Please login to continue</Form.Text>
                     <Form.Group controlId="formUsername">
                         <Form.Label> Username: </Form.Label>
@@ -69,10 +69,10 @@ export function LoginView(props) {
                     </span>
                     <span>
                         <Form.Text><h5>Use this login information to take a look:</h5></Form.Text>
-                        <p>
+                        <h6>
                             Username: testuser <br></br>
                             Password: testuserpw
-                        </p>
+                        </h6>
                     </span>
                 </Form>
             </Row>

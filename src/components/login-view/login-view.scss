@@ -7,10 +7,15 @@
 //     // -ms-transform: translate(-50%, -50%);
 //     // transform: translate(-50%, -50%);
 // }
-
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
 form.form.text-center.was-validated{
-     margin:0 auto;
+    margin:0 auto;
+}
 
+h1.syfy-title{
+    font-family: 'Black Ops One', cursive;
+    color:rgb(255, 244, 84);
+    -webkit-text-stroke: .55px #000;
 }
 
 Form.loginForm{
