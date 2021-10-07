@@ -2,12 +2,6 @@ form.form.text-center.was-validated {
   margin: 0 auto;
 }
 
-h1.syfy-title {
-  font-family: 'Black Ops One', cursive;
-  color: #fff454;
-  -webkit-text-stroke: .55px #000;
-}
-
 Form.loginForm {
   background-color: rgba(165, 201, 255, 0.185);
   padding: 10rem;
