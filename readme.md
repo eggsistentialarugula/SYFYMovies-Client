@@ -42,6 +42,7 @@ This is a Single-Page Application (SPA) created with the **React** library. It u
 
 <h3 id = "dependencies">Dependencies</h3>
 
+ * Parcel
  * axios: 0.21.1
  * prop-types: 15.7.2
  * react: 17.0.2
@@ -51,12 +52,6 @@ This is a Single-Page Application (SPA) created with the **React** library. It u
  * react-router-dom: 5.2.0
  * redux: 4.1.1
  * redux-devtools-extension: 2.13.9
-
-<h3>Dev Dependencies</h3>
-
- * Parcel
- * Netlify
- * ESLint
 
 
 
