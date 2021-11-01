@@ -1,4 +1,4 @@
-# myFlix-client
+# SYFYMovies Client
 
 # Description
 
@@ -23,8 +23,6 @@ This is a Single-Page Application (SPA) created with **React** library. It uses 
 
  # Dev Dependencies
  * Parcel
- * VSCode
- * Github Desktop
  * Netlify
  * ESLint
 
@@ -35,7 +33,6 @@ This is a Single-Page Application (SPA) created with **React** library. It uses 
 * VS Code
 * MongoDB
 * Node.js
-
 
 # Tech
 
