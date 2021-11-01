@@ -10,6 +10,22 @@ This project uses React to build the client-side for an application myFlix, base
 
 This is a Single-Page Application (SPA) created with **React** library. It uses npm and Parcel to compile. It contains a mix of class and function components. State management is taken care of by **React Redux**. The design is taken care of by **React Bootstrap**.
 
+# Tech
+
+* Single-Page Application (SPA)
+* State Routing is used to navigate between views and share URLs
+* Written in the React library ES2015+
+* Respects the Flux pattern using React Redux
+* Responsive web design
+
+# Built with:
+
+* React
+* React Bootstrap
+* VS Code
+* MongoDB
+* Node.js
+
 # Dependencies
  * axios: 0.21.1
  * prop-types: 15.7.2
@@ -25,23 +41,6 @@ This is a Single-Page Application (SPA) created with **React** library. It uses 
  * Parcel
  * Netlify
  * ESLint
-
-# Built with:
-
-* React
-* React Bootstrap
-* VS Code
-* MongoDB
-* Node.js
-
-# Tech
-
-* Single-Page Application (SPA)
-* State Routing is used to navigate between views and share URLs
-* Written in the React library ES2015+
-* Respects the Flux pattern using React Redux
-* Responsive web design
-
 
 
 
