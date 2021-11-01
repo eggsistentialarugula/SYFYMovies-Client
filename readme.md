@@ -52,7 +52,7 @@ This is a Single-Page Application (SPA) created with the **React** library. It u
  * redux: 4.1.1
  * redux-devtools-extension: 2.13.9
 
-<h3>Dependencies</h3>
+<h3>Dev Dependencies</h3>
 
  * Parcel
  * Netlify
