@@ -1,14 +1,27 @@
 # SYFYMovies Client
 
+### Quick Access
+
+[Overview](#overview) <br/>
+[Description](#description) <br/>
+[Tech](#tech) <br/>
+[Tools used](#built) <br/>
+[Dependencies](#Dependencies) <br/>
+[Client Apps Using this API](#clients)
+
+<h3 id = "overview">Overview</h3>
+
+This project uses the React library to build the **client-side** component for the movie application SYFYMovies, based on its existing [server-side code (REST API and database)](https://github.com/eggsistentialarugula/SYFYMovies_API). It handles data through the defined REST API endpoints.
+
+Combined with the [Server-Side component](https://github.com/eggsistentialarugula/SYFYMovies_API), this web application utilizes the MERN stack, which consists of MongoDB, Express, React, and Node.js.
+
 # Description
 
 [Link to the project](https://mysyfymovies.netlify.app/)
 
-This app is meant for people who are fans of Syfy movies. One of their most popular movies series was Sharknado. Users can register for an account, view information about a movie, and add their favorites movies.
+This app is meant for people who are fans of Syfy movies or just movie enthusiasts in general. One of their most popular movies series was Sharknado. Users can register for an account, view information about a movie, and add their favorite movies.
 
-This project uses React to build the client-side for an application myFlix, based on its existing [server-side code (REST API and database)](https://github.com/eggsistentialarugula/SYFYMovies_API). It handles data through the defined REST API endpoints.
-
-This is a Single-Page Application (SPA) created with **React** library. It uses npm and Parcel to compile. It contains a mix of class and function components. State management is taken care of by **React Redux**. The design is taken care of by **React Bootstrap**.
+This is a Single-Page Application (SPA) created with **React** library. It uses npm and Parcel to compile. It contains a mix of class and function components. State management is taken care of by **React Redux**. The design is taken care of by **React Bootstrap**. The app is hosted on Netlify.
 
 # Tech
 
