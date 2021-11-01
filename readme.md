@@ -1,5 +1,7 @@
 # SYFYMovies Client
 
+[Link to the project](https://mysyfymovies.netlify.app/)
+
 ### Quick Access
 
 [Overview](#overview) <br/>
@@ -7,7 +9,6 @@
 [Tech](#tech) <br/>
 [Tools used](#built) <br/>
 [Dependencies](#Dependencies) <br/>
-[Client Apps Using this API](#clients)
 
 <h3 id = "overview">Overview</h3>
 
@@ -16,8 +17,6 @@ This project uses the React library to build the **client-side** component for t
 Combined with the [Server-Side component](https://github.com/eggsistentialarugula/SYFYMovies_API), this web application utilizes the _**MERN stack**_, which consists of _MongoDB_, _Express_, _React_, and _Node.js_.
 
 <h3 id = "overview">Description</h3>
-
-[Link to the project](https://mysyfymovies.netlify.app/)
 
 This app is meant for people who are fans of Syfy movies or just movie enthusiasts in general. One of their most popular movies series was Sharknado. Users can register for an account, view information about a movie, and add their favorite movies.
 
@@ -33,7 +32,7 @@ This is a Single-Page Application (SPA) created with the **React** library. It u
 * Responsive web design using Bootstrap as a UI library
 * Hosted on Netlify
 
-<h3 id = "tech">Built With</h3>
+<h3 id = "built">Built With</h3>
 
 * React
 * React Bootstrap
