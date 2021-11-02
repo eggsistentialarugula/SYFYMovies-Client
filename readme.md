@@ -6,6 +6,7 @@
 
 [Overview](#overview) <br/>
 [Description](#description) <br/>
+[Features](#features) <br/>
 [Tech](#tech) <br/>
 [Tools used](#built) <br/>
 [Dependencies](#Dependencies) <br/>
@@ -20,7 +21,45 @@ Combined with the [Server-Side component](https://github.com/eggsistentialarugul
 
 This app is meant for people who are fans of Syfy movies or just movie enthusiasts in general. One of their most popular movies series was Sharknado. Users can register for an account, view information about a movie, and add their favorite movies.
 
-This is a Single-Page Application (SPA) created with the **React** library. It uses npm and Parcel to compile. It contains a mix of class and function components. State management is taken care of by **React Redux**. The design is taken care of by **React Bootstrap**. The app is hosted on **Netlify**.
+This is a Single-Page Application (SPA) created with the **React** library. It uses npm and **Parcel** to compile. It contains a mix of class and function components. State management is taken care of by **React Redux**. The design is taken care of by **React Bootstrap**. The app is hosted on **Netlify**.
+
+<h3 id = "features">Features</h3>
+
+<h4>Main View</h4>
+
+* Return a list of all movies to the user (eat listed item with an image, title, and description)
+* Sorts and filters movies
+* Ability to select a movie for more details
+
+<h4>Single Movie View</h4>
+
+* Returns data (description, genre, director, image) about a single movie to the user
+* Allows users to add a movie to their list of favorites
+
+<h4>Login View</h4>
+
+* Allow users to log in with a username and password
+
+<h4>Register view</h4>
+
+* Allow new users to register (username, password, email, birthday)
+
+<h4>Genre view</h4>
+
+* Returns data about a genre, with a name and description
+* Display movies within the selected genre
+
+<h4>Director view</h4>
+
+* Returns data about a director (name, bio, birth year, death year)
+* Displays movies that the selected director created
+
+<h4>Profile view</h4>
+
+* Allows users to update their user info (username, password, email, date of birth)
+* Allows existing users to deregister
+* Displays favorite movies
+* Allows users to remove a movie from their list of favorites
 
 <h3 id = "tech">Tech</h3>
 
@@ -31,6 +70,9 @@ This is a Single-Page Application (SPA) created with the **React** library. It u
 * Respects the Flux pattern using React Redux
 * Responsive web design using Bootstrap as a UI library
 * Hosted on Netlify
+
+**Client** _React_, _React Redux_, _React Bootstrap_, _Parcel_ <br/>
+**Server** _Node_
 
 <h3 id = "built">Built With</h3>
 
