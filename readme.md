@@ -82,7 +82,7 @@ This is a Single-Page Application (SPA) created with the **React** library. It u
 * MongoDB
 * Node.js
 
-<h3 id = "dependencies">Dependencies</h3>
+<h3 id = "dependencies">Dependencies and DevDependencies</h3>
 
  * @parcel/transformer-sass@2.0.0-beta.3.1
  * parcel-bundler@1.12.5
