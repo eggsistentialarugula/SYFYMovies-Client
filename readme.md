@@ -9,7 +9,7 @@
 [Features](#features) <br/>
 [Tech](#tech) <br/>
 [Tools used](#built) <br/>
-[Dependencies](#Dependencies) <br/>
+[Dependencies](#dependencies) <br/>
 
 <h3 id = "overview">Overview</h3>
 
