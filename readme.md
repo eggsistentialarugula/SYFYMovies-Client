@@ -1,8 +1,10 @@
 # SYFYMovies Client
 
+<h3>Demo</h3>
+
 https://user-images.githubusercontent.com/69954816/147399221-fced294a-ee09-425a-b7a5-7bb1945d9037.mp4
 
-[Link to the project](https://mysyfymovies.netlify.app/)
+[Link to live preview](https://mysyfymovies.netlify.app/)
 
 ### Quick Access
 
